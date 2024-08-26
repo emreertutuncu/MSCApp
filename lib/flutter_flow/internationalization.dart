@@ -138,11 +138,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // HomePage
   {
-    'kr0wrf1j': {
+    'f6dexcrb': {
       'tr': 'Page Title',
       'en': '',
     },
-    'fwnr9fo7': {
+    'r3e69avs': {
       'tr': 'Home',
       'en': '',
     },
