@@ -5,7 +5,7 @@
 
 
     <application
-        android:label="MscApp"
+        android:label="MSC Mixed Systems"
         tools:replace="android:label"
         android:icon="@mipmap/ic_launcher"
         android:requestLegacyExternalStorage="true">

@@ -1,10 +1,11 @@
-import '/auth/custom_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
+import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'login_page_model.dart';
 export 'login_page_model.dart';
 
@@ -121,27 +122,61 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Colors.white,
-        body: Column(
-          mainAxisSize: MainAxisSize.max,
+        body: Stack(
           children: [
-            Container(
-              width: double.infinity,
-              height: 300.0,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-              ),
-              child: Container(
-                width: 100.0,
-                height: 100.0,
-                decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [Color(0x00FFFFFF), Colors.white],
-                    stops: [0.0, 1.0],
-                    begin: AlignmentDirectional(0.0, -1.0),
-                    end: AlignmentDirectional(0, 1.0),
+            Align(
+              alignment: const AlignmentDirectional(0.0, 0.0),
+              child: Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 100.0),
+                child: Container(
+                  width: 400.0,
+                  height: 100.0,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                  ),
+                  child: Align(
+                    alignment: const AlignmentDirectional(1.0, 0.0),
+                    child: FFButtonWidget(
+                      onPressed: () {
+                        print('Button pressed ...');
+                      },
+                      text: FFLocalizations.of(context).getText(
+                        '883p5081' /* TR */,
+                      ),
+                      icon: const FaIcon(
+                        FontAwesomeIcons.globe,
+                        size: 20.0,
+                      ),
+                      options: FFButtonOptions(
+                        height: 40.0,
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            24.0, 0.0, 24.0, 0.0),
+                        iconPadding:
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: FlutterFlowTheme.of(context).info,
+                        textStyle:
+                            FlutterFlowTheme.of(context).displaySmall.override(
+                                  fontFamily: 'Outfit',
+                                  fontSize: 12.0,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.w100,
+                                ),
+                        elevation: 2.0,
+                        borderSide: const BorderSide(
+                          color: Colors.transparent,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
                   ),
                 ),
-                child: Column(
+              ),
+            ),
+            Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -183,328 +218,348 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                         animationsMap['containerOnPageLoadAnimation']!),
                   ],
                 ),
-              ),
-            ),
-            Align(
-              alignment: const AlignmentDirectional(0.0, 0.0),
-              child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 16.0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
-                      child: SizedBox(
-                        width: double.infinity,
-                        child: TextFormField(
-                          controller: _model.customerCodeTextController,
-                          focusNode: _model.customerCodeFocusNode,
-                          autofocus: true,
-                          autofillHints: const [AutofillHints.email],
-                          obscureText: false,
-                          decoration: InputDecoration(
-                            labelText: FFLocalizations.of(context).getText(
-                              'lz1sgzkx' /* Customer Code */,
-                            ),
-                            labelStyle: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .override(
-                                  fontFamily: 'Plus Jakarta Sans',
-                                  color: const Color(0xFF57636C),
-                                  fontSize: 14.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.w500,
+                Align(
+                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  child: Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 16.0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 16.0),
+                          child: SizedBox(
+                            width: double.infinity,
+                            child: TextFormField(
+                              controller: _model.customerCodeTextController,
+                              focusNode: _model.customerCodeFocusNode,
+                              autofocus: true,
+                              autofillHints: const [AutofillHints.email],
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                labelText: FFLocalizations.of(context).getText(
+                                  'lz1sgzkx' /* Müşteri Kodu */,
                                 ),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Color(0xFFE0E3E7),
-                                width: 2.0,
+                                labelStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Plus Jakarta Sans',
+                                      color: const Color(0xFF57636C),
+                                      fontSize: 14.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0xFFE0E3E7),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0xFF4B39EF),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                errorBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0xFFFF5963),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                focusedErrorBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0xFFFF5963),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                filled: true,
+                                fillColor: Colors.white,
+                                contentPadding: const EdgeInsets.all(24.0),
                               ),
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Color(0xFF4B39EF),
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            errorBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Color(0xFFFF5963),
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            focusedErrorBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Color(0xFFFF5963),
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            filled: true,
-                            fillColor: Colors.white,
-                            contentPadding: const EdgeInsets.all(24.0),
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: const Color(0xFF101213),
                                     fontSize: 14.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
-                          keyboardType: TextInputType.emailAddress,
-                          validator: _model.customerCodeTextControllerValidator
-                              .asValidator(context),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
-                      child: SizedBox(
-                        width: double.infinity,
-                        child: TextFormField(
-                          controller: _model.usernameTextController,
-                          focusNode: _model.usernameFocusNode,
-                          autofocus: true,
-                          autofillHints: const [AutofillHints.email],
-                          obscureText: false,
-                          decoration: InputDecoration(
-                            labelText: FFLocalizations.of(context).getText(
-                              '3yqikr54' /* Username */,
+                              keyboardType: TextInputType.emailAddress,
+                              validator: _model
+                                  .customerCodeTextControllerValidator
+                                  .asValidator(context),
                             ),
-                            labelStyle: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .override(
-                                  fontFamily: 'Plus Jakarta Sans',
-                                  color: const Color(0xFF57636C),
-                                  fontSize: 14.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Color(0xFFE0E3E7),
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Color(0xFF4B39EF),
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            errorBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Color(0xFFFF5963),
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            focusedErrorBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Color(0xFFFF5963),
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            filled: true,
-                            fillColor: Colors.white,
-                            contentPadding: const EdgeInsets.all(24.0),
                           ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
+                        ),
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 16.0),
+                          child: SizedBox(
+                            width: double.infinity,
+                            child: TextFormField(
+                              controller: _model.usernameTextController,
+                              focusNode: _model.usernameFocusNode,
+                              autofocus: true,
+                              autofillHints: const [AutofillHints.email],
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                labelText: FFLocalizations.of(context).getText(
+                                  '3yqikr54' /* Kullanıcı adı */,
+                                ),
+                                labelStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Plus Jakarta Sans',
+                                      color: const Color(0xFF57636C),
+                                      fontSize: 14.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0xFFE0E3E7),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0xFF4B39EF),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                errorBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0xFFFF5963),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                focusedErrorBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0xFFFF5963),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                filled: true,
+                                fillColor: Colors.white,
+                                contentPadding: const EdgeInsets.all(24.0),
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: const Color(0xFF101213),
                                     fontSize: 14.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
-                          keyboardType: TextInputType.emailAddress,
-                          validator: _model.usernameTextControllerValidator
-                              .asValidator(context),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
-                      child: SizedBox(
-                        width: double.infinity,
-                        child: TextFormField(
-                          controller: _model.passwordTextController,
-                          focusNode: _model.passwordFocusNode,
-                          autofocus: false,
-                          autofillHints: const [AutofillHints.password],
-                          obscureText: !_model.passwordVisibility,
-                          decoration: InputDecoration(
-                            labelText: FFLocalizations.of(context).getText(
-                              'vmphk4gp' /* Password */,
-                            ),
-                            labelStyle: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .override(
-                                  fontFamily: 'Plus Jakarta Sans',
-                                  color: const Color(0xFF57636C),
-                                  fontSize: 14.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Color(0xFFE0E3E7),
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Color(0xFF4B39EF),
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            errorBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Color(0xFFFF5963),
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            focusedErrorBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Color(0xFFFF5963),
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            filled: true,
-                            fillColor: Colors.white,
-                            contentPadding: const EdgeInsets.all(24.0),
-                            suffixIcon: InkWell(
-                              onTap: () => setState(
-                                () => _model.passwordVisibility =
-                                    !_model.passwordVisibility,
-                              ),
-                              focusNode: FocusNode(skipTraversal: true),
-                              child: Icon(
-                                _model.passwordVisibility
-                                    ? Icons.visibility_outlined
-                                    : Icons.visibility_off_outlined,
-                                color: const Color(0xFF57636C),
-                                size: 24.0,
-                              ),
+                              keyboardType: TextInputType.emailAddress,
+                              validator: _model.usernameTextControllerValidator
+                                  .asValidator(context),
                             ),
                           ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
+                        ),
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 16.0),
+                          child: SizedBox(
+                            width: double.infinity,
+                            child: TextFormField(
+                              controller: _model.passwordTextController,
+                              focusNode: _model.passwordFocusNode,
+                              autofocus: false,
+                              autofillHints: const [AutofillHints.password],
+                              obscureText: !_model.passwordVisibility,
+                              decoration: InputDecoration(
+                                labelText: FFLocalizations.of(context).getText(
+                                  'vmphk4gp' /* Parola */,
+                                ),
+                                labelStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Plus Jakarta Sans',
+                                      color: const Color(0xFF57636C),
+                                      fontSize: 14.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0xFFE0E3E7),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0xFF4B39EF),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                errorBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0xFFFF5963),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                focusedErrorBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0xFFFF5963),
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                filled: true,
+                                fillColor: Colors.white,
+                                contentPadding: const EdgeInsets.all(24.0),
+                                suffixIcon: InkWell(
+                                  onTap: () => setState(
+                                    () => _model.passwordVisibility =
+                                        !_model.passwordVisibility,
+                                  ),
+                                  focusNode: FocusNode(skipTraversal: true),
+                                  child: Icon(
+                                    _model.passwordVisibility
+                                        ? Icons.visibility_outlined
+                                        : Icons.visibility_off_outlined,
+                                    color: const Color(0xFF57636C),
+                                    size: 24.0,
+                                  ),
+                                ),
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: const Color(0xFF101213),
                                     fontSize: 14.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
-                          validator: _model.passwordTextControllerValidator
-                              .asValidator(context),
+                              validator: _model.passwordTextControllerValidator
+                                  .asValidator(context),
+                            ),
+                          ),
                         ),
-                      ),
-                    ),
-                    Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
-                      child: Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
-                        child: FFButtonWidget(
-                          onPressed: () async {
-                            GoRouter.of(context).prepareAuthEvent();
-                            await authManager.signIn();
-
-                            context.goNamedAuth('LoginPage', context.mounted);
-                          },
-                          text: FFLocalizations.of(context).getText(
-                            '0swpkm39' /* Login */,
-                          ),
-                          icon: const Icon(
-                            Icons.login,
-                            size: 15.0,
-                          ),
-                          options: FFButtonOptions(
-                            width: 230.0,
-                            height: 52.0,
+                        Align(
+                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: Colors.black,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Plus Jakarta Sans',
+                                0.0, 0.0, 0.0, 16.0),
+                            child: FFButtonWidget(
+                              onPressed: () {
+                                print('btnLogin pressed ...');
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                '0swpkm39' /* Giriş */,
+                              ),
+                              icon: const Icon(
+                                Icons.login,
+                                size: 15.0,
+                              ),
+                              options: FFButtonOptions(
+                                width: 230.0,
+                                height: 52.0,
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: Colors.black,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: 'Plus Jakarta Sans',
+                                      color: Colors.white,
+                                      fontSize: 16.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                elevation: 3.0,
+                                borderSide: const BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1.0,
+                                ),
+                                borderRadius: BorderRadius.circular(12.0),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Align(
+                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          child: Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 16.0),
+                            child: FFButtonWidget(
+                              onPressed: () {
+                                print('Button pressed ...');
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                'bpxncwmb' /* Şifremi unuttum */,
+                              ),
+                              options: FFButtonOptions(
+                                width: 230.0,
+                                height: 44.0,
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: Colors.white,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Plus Jakarta Sans',
+                                      color: const Color(0xFF101213),
+                                      fontSize: 14.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                elevation: 0.0,
+                                borderSide: const BorderSide(
                                   color: Colors.white,
-                                  fontSize: 16.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.w500,
+                                  width: 2.0,
                                 ),
-                            elevation: 3.0,
-                            borderSide: const BorderSide(
-                              color: Colors.transparent,
-                              width: 1.0,
+                                borderRadius: BorderRadius.circular(12.0),
+                              ),
                             ),
-                            borderRadius: BorderRadius.circular(12.0),
                           ),
                         ),
-                      ),
-                    ),
-                    Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
-                      child: Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
-                        child: FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
-                          },
-                          text: FFLocalizations.of(context).getText(
-                            'bpxncwmb' /* Forgot Password */,
-                          ),
-                          options: FFButtonOptions(
-                            width: 230.0,
-                            height: 44.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: Colors.white,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Plus Jakarta Sans',
-                                  color: const Color(0xFF101213),
-                                  fontSize: 14.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                            elevation: 0.0,
-                            borderSide: const BorderSide(
-                              color: Colors.white,
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(12.0),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ).animateOnPageLoad(
-                    animationsMap['columnOnPageLoadAnimation']!),
-              ),
+                      ],
+                    ).animateOnPageLoad(
+                        animationsMap['columnOnPageLoadAnimation']!),
+                  ),
+                ),
+                FlutterFlowLanguageSelector(
+                  width: 124.0,
+                  backgroundColor: FlutterFlowTheme.of(context).tertiary,
+                  borderColor: Colors.transparent,
+                  dropdownIconColor: Colors.white,
+                  borderRadius: 8.0,
+                  textStyle: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 13.0,
+                  ),
+                  hideFlags: true,
+                  flagSize: 24.0,
+                  flagTextGap: 8.0,
+                  currentLanguage: FFLocalizations.of(context).languageCode,
+                  languages: FFLocalizations.languages(),
+                  onChanged: (lang) => setAppLanguage(context, lang),
+                ),
+              ],
             ),
           ],
         ),

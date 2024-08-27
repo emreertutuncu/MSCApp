@@ -107,41 +107,41 @@ Locale createLocale(String language) => language.contains('_')
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // LoginPage
   {
+    '883p5081': {
+      'tr': 'TR',
+      'en': 'EN',
+    },
     'dt0flzde': {
       'tr': 'MSC Mixing System',
-      'en': '',
+      'en': 'MSC Mixing System',
     },
     'lz1sgzkx': {
-      'tr': 'Customer Code',
-      'en': '',
+      'tr': 'Müşteri Kodu',
+      'en': 'Customer Code',
     },
     '3yqikr54': {
-      'tr': 'Username',
-      'en': '',
+      'tr': 'Kullanıcı adı',
+      'en': 'Username',
     },
     'vmphk4gp': {
-      'tr': 'Password',
-      'en': '',
+      'tr': 'Parola',
+      'en': 'Password',
     },
     '0swpkm39': {
-      'tr': 'Login',
-      'en': '',
+      'tr': 'Giriş',
+      'en': 'Login',
     },
     'bpxncwmb': {
-      'tr': 'Forgot Password',
-      'en': '',
+      'tr': 'Şifremi unuttum',
+      'en': 'Forgot Password',
     },
     '7n53u0kk': {
-      'tr': 'Home',
-      'en': 'Anasayfa',
+      'tr': 'Anasayfa',
+      'en': 'Home',
     },
   },
   // HomePage
   {
-    'f6dexcrb': {
-      'tr': 'Page Title',
-      'en': '',
-    },
     'r3e69avs': {
       'tr': 'Home',
       'en': '',
