@@ -107,10 +107,6 @@ Locale createLocale(String language) => language.contains('_')
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // LoginPage
   {
-    '883p5081': {
-      'tr': 'TR',
-      'en': 'EN',
-    },
     'dt0flzde': {
       'tr': 'MSC Mixing System',
       'en': 'MSC Mixing System',
@@ -121,7 +117,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '3yqikr54': {
       'tr': 'Kullanıcı adı',
-      'en': 'Username',
+      'en': 'User name',
     },
     'vmphk4gp': {
       'tr': 'Parola',
@@ -142,9 +138,253 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // HomePage
   {
-    'r3e69avs': {
+    'sb7n8mo2': {
+      'tr':
+          '                               MSCColor Mixing System\n                                mobile v1.0 çıktı',
+      'en': '',
+    },
+    'utxcf0ac': {
+      'tr':
+          '                                Mixing sistem mobil uygulama ISO ve\n                                 Android\'de kullanıma sunuldu.',
+      'en': '',
+    },
+    'd13xe2yp': {
+      'tr': '\n\n\n\n3 day ago',
+      'en': '',
+    },
+    'blreehw5': {
+      'tr': 'MSC News',
+      'en': '',
+    },
+    '76hkpb0i': {
+      'tr': 'Anasayfa',
+      'en': 'Home',
+    },
+    'eygjzh5z': {
+      'tr': '',
+      'en': '',
+    },
+    'fxkx02oo': {
+      'tr': 'Standart Renkler',
+      'en': 'Standard Colors',
+    },
+    'juaui4hv': {
+      'tr': '',
+      'en': '',
+    },
+    'm0n02liw': {
+      'tr': 'Özel Renkler',
+      'en': 'Custom Colors',
+    },
+    'xddftb4u': {
+      'tr': '',
+      'en': '',
+    },
+    '7fn174i2': {
+      'tr': 'Ayarlar',
+      'en': 'Settings',
+    },
+    'q780wei2': {
+      'tr': '',
+      'en': '',
+    },
+    'dtswkd2g': {
+      'tr': '[KullanıcıAdı]',
+      'en': '[Username]',
+    },
+    'd8enq7z2': {
       'tr': 'Home',
       'en': '',
+    },
+  },
+  // colorDetailPage
+  {
+    'hosytc7f': {
+      'tr': 'Product Code',
+      'en': '',
+    },
+    'a1pw3qe2': {
+      'tr': 'Data Sheet',
+      'en': '',
+    },
+    'pg0ahpb2': {
+      'tr': 'RAL CODE',
+      'en': '',
+    },
+    'cjvjhju8': {
+      'tr': 'RAL NAME',
+      'en': '',
+    },
+    'rhzf83op': {
+      'tr': 'Amount',
+      'en': '',
+    },
+    'jt7oewjl': {
+      'tr': 'Calculate',
+      'en': '',
+    },
+    'l6ll7frz': {
+      'tr': 'Data Sheet',
+      'en': '',
+    },
+    'ssnf9seu': {
+      'tr': 'Print',
+      'en': '',
+    },
+    '2mn7m0n4': {
+      'tr': 'Clear',
+      'en': '',
+    },
+    'gt2bh0zr': {
+      'tr': 'Label',
+      'en': '',
+    },
+    '6b0o6oi6': {
+      'tr': 'MIX ',
+      'en': '',
+    },
+    '4kamm8i9': {
+      'tr': 'RAPID',
+      'en': '',
+    },
+    '71aezdrm': {
+      'tr': 'null grnull USD',
+      'en': '',
+    },
+    '5gkds1sw': {
+      'tr': 'Home',
+      'en': '',
+    },
+  },
+  // CustomColor
+  {
+    'uan4uyki': {
+      'tr': 'Özel Renkler',
+      'en': 'Custom Colors',
+    },
+    '87wcrt4d': {
+      'tr': '',
+      'en': '',
+    },
+    '4z8hznt1': {
+      'tr': 'Ara',
+      'en': '',
+    },
+    '3aej2m03': {
+      'tr': 'Home',
+      'en': 'Anasayfa',
+    },
+  },
+  // StandardColor
+  {
+    'o8d07xyj': {
+      'tr': 'Standart Renkler',
+      'en': 'Standard Colors',
+    },
+    't4pva9wm': {
+      'tr': 'Ara',
+      'en': 'Search all colors',
+    },
+    'yxlq2urv': {
+      'tr': 'Home',
+      'en': '',
+    },
+  },
+  // SettingsPage
+  {
+    '3zfe1qs7': {
+      'tr': '[Kullanıcı Adı]',
+      'en': '[Username]',
+    },
+    '5wpba3c2': {
+      'tr': '[Müşteri Kodu]',
+      'en': '[Customer Code]',
+    },
+    'tdkmavic': {
+      'tr': 'Profil düzenle',
+      'en': 'Edit Profile',
+    },
+    '5v5f3inr': {
+      'tr': 'Şifremi değiştir',
+      'en': 'Change Password',
+    },
+    'jfr5rx16': {
+      'tr': 'Bildirim ayarları',
+      'en': 'Notification Settings',
+    },
+    'n21flqau': {
+      'tr': 'Hizmet Şartları',
+      'en': 'Terms of Services',
+    },
+    '6aasd9y5': {
+      'tr': 'Çıkış yap',
+      'en': 'Log Out',
+    },
+  },
+  // ForgotPasswordPage
+  {
+    'tqm4a4cc': {
+      'tr': 'Geri',
+      'en': 'Back',
+    },
+    'kib64831': {
+      'tr': 'Şifremi unuttum',
+      'en': 'I forgot my password',
+    },
+    '2u3k6tbf': {
+      'tr':
+          'Şifrenizi sıfırlamanız için bir bağlantı içeren bir e-posta göndereceğiz. Lütfen aşağıya hesabınızla ilişkili e-postayı girin.',
+      'en':
+          'We will send you an email with a link to reset your password, please enter the email associated with your account below.',
+    },
+    'dp9s7twx': {
+      'tr': 'E-posta adresiniz',
+      'en': 'Your email address...',
+    },
+    'y9vos5zw': {
+      'tr': 'E-posta adresinizi girin',
+      'en': 'Enter your email...',
+    },
+    '4zg7opxn': {
+      'tr': 'Şifremi sıfırla',
+      'en': 'Send Link',
+    },
+    'ckhwxdk4': {
+      'tr': 'Anasayfa',
+      'en': 'Home',
+    },
+  },
+  // productColorRow
+  {
+    'tjhtzy4g': {
+      'tr': 'PRODUCT CODE (RAL CODE)',
+      'en': '',
+    },
+    'ji9dqywf': {
+      'tr': 'PRODUCT NAME (COLOR NAME)',
+      'en': '',
+    },
+  },
+  // productCustomColorRow
+  {
+    'lmepxjjy': {
+      'tr': 'PRODUCT CODE (RAL CODE)',
+      'en': '',
+    },
+    '81y78k9a': {
+      'tr': 'PRODUCT NAME (COLOR NAME)',
+      'en': '',
+    },
+  },
+  // ListTileProductColorRow
+  {
+    'mjwtu5vg': {
+      'tr': 'PRODUCT_CODE(RAL)',
+      'en': 'PRODUCT_CODE(RAL)',
+    },
+    'lkgsgmjr': {
+      'tr': 'PRODUCT_NAME',
+      'en': 'PRODUCT_NAME',
     },
   },
   // Miscellaneous

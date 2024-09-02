@@ -6,7 +6,6 @@ import 'package:provider/provider.dart';
 import '/auth/custom_auth/custom_auth_user_provider.dart';
 
 import '/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 export 'package:go_router/go_router.dart';
@@ -72,13 +71,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const LoginPageWidget() : const HomePageWidget(),
+          appStateNotifier.loggedIn ? const HomePageWidget() : const LoginPageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const LoginPageWidget() : const HomePageWidget(),
+              appStateNotifier.loggedIn ? const HomePageWidget() : const LoginPageWidget(),
         ),
         FFRoute(
           name: 'LoginPage',
@@ -89,6 +88,36 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'HomePage',
           path: '/homePage',
           builder: (context, params) => const HomePageWidget(),
+        ),
+        FFRoute(
+          name: 'colorDetailPage',
+          path: '/colorDetailPage',
+          builder: (context, params) => ColorDetailPageWidget(
+            colorCode: params.getParam(
+              'colorCode',
+              ParamType.Color,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'CustomColor',
+          path: '/customColor',
+          builder: (context, params) => const CustomColorWidget(),
+        ),
+        FFRoute(
+          name: 'StandardColor',
+          path: '/standardColor',
+          builder: (context, params) => const StandardColorWidget(),
+        ),
+        FFRoute(
+          name: 'SettingsPage',
+          path: '/settingsPage',
+          builder: (context, params) => const SettingsPageWidget(),
+        ),
+        FFRoute(
+          name: 'ForgotPasswordPage',
+          path: '/forgotPasswordPage',
+          builder: (context, params) => const ForgotPasswordPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -257,7 +286,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/homePage';
+            return '/loginPage';
           }
           return null;
         },
@@ -271,15 +300,11 @@ class FFRoute {
                 )
               : builder(context, ffParams);
           final child = appStateNotifier.loading
-              ? Center(
-                  child: SizedBox(
-                    width: 50.0,
-                    height: 50.0,
-                    child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation<Color>(
-                        FlutterFlowTheme.of(context).primary,
-                      ),
-                    ),
+              ? Container(
+                  color: Colors.transparent,
+                  child: Image.asset(
+                    'assets/images/WhatsApp_Image_2024-08-28_at_15.58.00.jpeg',
+                    fit: BoxFit.contain,
                   ),
                 )
               : page;
