@@ -26,7 +26,7 @@ class _CustomColorWidgetState extends State<CustomColorWidget> {
 
     _model.textFieldSearchTextController ??= TextEditingController();
     _model.textFieldSearchFocusNode ??= FocusNode();
-    _model.textFieldSearchFocusNode!.addListener(() => setState(() {}));
+    _model.textFieldSearchFocusNode!.addListener(() => safeSetState(() {}));
   }
 
   @override
@@ -47,14 +47,14 @@ class _CustomColorWidgetState extends State<CustomColorWidget> {
           backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
-            borderRadius: 20.0,
-            borderWidth: 1.0,
-            buttonSize: 40.0,
+            borderRadius: 20,
+            borderWidth: 1,
+            buttonSize: 40,
             fillColor: const Color(0x4CFDFDFD),
             icon: Icon(
               Icons.arrow_back_rounded,
               color: FlutterFlowTheme.of(context).primaryText,
-              size: 24.0,
+              size: 24,
             ),
             onPressed: () async {
               context.pushNamed('HomePage');
@@ -70,7 +70,7 @@ class _CustomColorWidgetState extends State<CustomColorWidget> {
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
                       fontFamily: 'Outfit',
                       color: FlutterFlowTheme.of(context).primaryText,
-                      fontSize: 22.0,
+                      fontSize: 22,
                       letterSpacing: 0.0,
                     ),
               ),
@@ -78,7 +78,7 @@ class _CustomColorWidgetState extends State<CustomColorWidget> {
           ),
           actions: const [],
           centerTitle: false,
-          elevation: 2.0,
+          elevation: 2,
         ),
         body: SafeArea(
           top: true,
@@ -90,17 +90,16 @@ class _CustomColorWidgetState extends State<CustomColorWidget> {
                 children: [
                   Expanded(
                     child: Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0, 0),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 16.0, 16.0, 8.0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(16, 16, 16, 8),
                         child: TextFormField(
                           controller: _model.textFieldSearchTextController,
                           focusNode: _model.textFieldSearchFocusNode,
                           onChanged: (_) => EasyDebounce.debounce(
                             '_model.textFieldSearchTextController',
                             const Duration(milliseconds: 1000),
-                            () => setState(() {}),
+                            () => safeSetState(() {}),
                           ),
                           autofocus: true,
                           textInputAction: TextInputAction.search,
@@ -124,33 +123,33 @@ class _CustomColorWidgetState extends State<CustomColorWidget> {
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color: FlutterFlowTheme.of(context).alternate,
-                                width: 2.0,
+                                width: 2,
                               ),
-                              borderRadius: BorderRadius.circular(8.0),
+                              borderRadius: BorderRadius.circular(8),
                             ),
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color: FlutterFlowTheme.of(context).primary,
-                                width: 2.0,
+                                width: 2,
                               ),
-                              borderRadius: BorderRadius.circular(8.0),
+                              borderRadius: BorderRadius.circular(8),
                             ),
                             errorBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color: FlutterFlowTheme.of(context).error,
-                                width: 2.0,
+                                width: 2,
                               ),
-                              borderRadius: BorderRadius.circular(8.0),
+                              borderRadius: BorderRadius.circular(8),
                             ),
                             focusedErrorBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color: FlutterFlowTheme.of(context).error,
-                                width: 2.0,
+                                width: 2,
                               ),
-                              borderRadius: BorderRadius.circular(8.0),
+                              borderRadius: BorderRadius.circular(8),
                             ),
-                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
-                                16.0, 16.0, 16.0, 8.0),
+                            contentPadding:
+                                const EdgeInsetsDirectional.fromSTEB(16, 16, 16, 8),
                             suffixIcon: const Icon(
                               Icons.search,
                             ),
@@ -171,7 +170,7 @@ class _CustomColorWidgetState extends State<CustomColorWidget> {
                 ],
               ),
               Divider(
-                thickness: 1.0,
+                thickness: 1,
                 color: FlutterFlowTheme.of(context).accent4,
               ),
               ListView(
@@ -181,7 +180,7 @@ class _CustomColorWidgetState extends State<CustomColorWidget> {
                 children: [
                   wrapWithModel(
                     model: _model.listTileProductColorRowModel,
-                    updateCallback: () => setState(() {}),
+                    updateCallback: () => safeSetState(() {}),
                     child: const ListTileProductColorRowWidget(),
                   ),
                 ],

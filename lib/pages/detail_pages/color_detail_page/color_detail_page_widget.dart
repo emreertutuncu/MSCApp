@@ -50,14 +50,14 @@ class _ColorDetailPageWidgetState extends State<ColorDetailPageWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
-            borderRadius: 20.0,
-            borderWidth: 1.0,
-            buttonSize: 40.0,
+            borderRadius: 20,
+            borderWidth: 1,
+            buttonSize: 40,
             fillColor: const Color(0x4CFFFFFF),
             icon: Icon(
               Icons.arrow_back_sharp,
               color: FlutterFlowTheme.of(context).primaryText,
-              size: 24.0,
+              size: 24,
             ),
             onPressed: () async {
               context.pushNamed('StandardColor');
@@ -70,15 +70,14 @@ class _ColorDetailPageWidgetState extends State<ColorDetailPageWidget> {
                   Stack(
                     children: [
                       Container(
-                        width: 30.0,
-                        height: 30.0,
+                        width: 30,
+                        height: 30,
                         decoration: BoxDecoration(
                           color: widget.colorCode,
                         ),
                       ),
                       Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(35.0, 0.0, 0.0, 0.0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(35, 0, 0, 0),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             'hosytc7f' /* Product Code */,
@@ -86,7 +85,7 @@ class _ColorDetailPageWidgetState extends State<ColorDetailPageWidget> {
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
-                                    fontSize: 20.0,
+                                    fontSize: 20,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -107,48 +106,48 @@ class _ColorDetailPageWidgetState extends State<ColorDetailPageWidget> {
                 'a1pw3qe2' /* Data Sheet */,
               ),
               options: FFButtonOptions(
-                width: 113.0,
-                height: 30.0,
-                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                width: 113,
+                height: 30,
+                padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                iconPadding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                 color: const Color(0xFFF3F3F3),
                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                       fontFamily: 'Readex Pro',
                       color: Colors.black,
                       letterSpacing: 0.0,
                     ),
-                elevation: 3.0,
+                elevation: 3,
                 borderSide: const BorderSide(
                   color: Color(0x00E8E1E1),
-                  width: 1.0,
+                  width: 1,
                 ),
-                borderRadius: BorderRadius.circular(8.0),
+                borderRadius: BorderRadius.circular(8),
               ),
             ),
           ],
           centerTitle: false,
-          elevation: 2.0,
+          elevation: 2,
         ),
         body: SafeArea(
           top: true,
           child: Stack(
             children: [
               Container(
-                width: 50.0,
-                height: 50.0,
+                width: 50,
+                height: 50,
                 decoration: BoxDecoration(
                   color: widget.colorCode,
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(55.0, 0.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(55, 0, 0, 0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     'pg0ahpb2' /* RAL CODE */,
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Readex Pro',
-                        fontSize: 20.0,
+                        fontSize: 20,
                         letterSpacing: 0.0,
                         fontWeight: FontWeight.bold,
                       ),
@@ -170,9 +169,9 @@ class _ColorDetailPageWidgetState extends State<ColorDetailPageWidget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, -0.78),
+                alignment: const AlignmentDirectional(0, -0.78),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
                   child: TextFormField(
                     controller: _model.textController,
                     focusNode: _model.textFieldFocusNode,
@@ -195,30 +194,30 @@ class _ColorDetailPageWidgetState extends State<ColorDetailPageWidget> {
                       enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
                           color: FlutterFlowTheme.of(context).alternate,
-                          width: 2.0,
+                          width: 2,
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
+                        borderRadius: BorderRadius.circular(8),
                       ),
                       focusedBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
                           color: FlutterFlowTheme.of(context).primary,
-                          width: 2.0,
+                          width: 2,
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
+                        borderRadius: BorderRadius.circular(8),
                       ),
                       errorBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
                           color: FlutterFlowTheme.of(context).error,
-                          width: 2.0,
+                          width: 2,
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
+                        borderRadius: BorderRadius.circular(8),
                       ),
                       focusedErrorBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
                           color: FlutterFlowTheme.of(context).error,
-                          width: 2.0,
+                          width: 2,
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
+                        borderRadius: BorderRadius.circular(8),
                       ),
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -238,11 +237,9 @@ class _ColorDetailPageWidgetState extends State<ColorDetailPageWidget> {
                     'jt7oewjl' /* Calculate */,
                   ),
                   options: FFButtonOptions(
-                    height: 40.0,
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                    iconPadding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    height: 40,
+                    padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                     color: const Color(0xFF0C0C0C),
                     textStyle: FlutterFlowTheme.of(context).labelSmall.override(
                           fontFamily: 'Readex Pro',
@@ -250,12 +247,12 @@ class _ColorDetailPageWidgetState extends State<ColorDetailPageWidget> {
                               FlutterFlowTheme.of(context).secondaryBackground,
                           letterSpacing: 0.0,
                         ),
-                    elevation: 3.0,
+                    elevation: 3,
                     borderSide: const BorderSide(
                       color: Colors.transparent,
-                      width: 1.0,
+                      width: 1,
                     ),
-                    borderRadius: BorderRadius.circular(20.0),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                 ),
               ),
@@ -269,24 +266,22 @@ class _ColorDetailPageWidgetState extends State<ColorDetailPageWidget> {
                     'l6ll7frz' /* Data Sheet */,
                   ),
                   options: FFButtonOptions(
-                    width: 118.0,
-                    height: 29.0,
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                    iconPadding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    width: 118,
+                    height: 29,
+                    padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                     color: Colors.white,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Readex Pro',
                           color: Colors.black,
                           letterSpacing: 0.0,
                         ),
-                    elevation: 3.0,
+                    elevation: 3,
                     borderSide: const BorderSide(
                       color: Colors.transparent,
-                      width: 1.0,
+                      width: 1,
                     ),
-                    borderRadius: BorderRadius.circular(8.0),
+                    borderRadius: BorderRadius.circular(8),
                   ),
                 ),
               ),
@@ -300,22 +295,20 @@ class _ColorDetailPageWidgetState extends State<ColorDetailPageWidget> {
                     'ssnf9seu' /* Print */,
                   ),
                   options: FFButtonOptions(
-                    height: 40.0,
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                    iconPadding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    height: 40,
+                    padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                     color: Colors.white,
                     textStyle: FlutterFlowTheme.of(context).labelLarge.override(
                           fontFamily: 'Readex Pro',
                           letterSpacing: 0.0,
                         ),
-                    elevation: 3.0,
+                    elevation: 3,
                     borderSide: const BorderSide(
                       color: Colors.transparent,
-                      width: 1.0,
+                      width: 1,
                     ),
-                    borderRadius: BorderRadius.circular(8.0),
+                    borderRadius: BorderRadius.circular(8),
                   ),
                 ),
               ),
@@ -329,22 +322,20 @@ class _ColorDetailPageWidgetState extends State<ColorDetailPageWidget> {
                     '2mn7m0n4' /* Clear */,
                   ),
                   options: FFButtonOptions(
-                    height: 40.0,
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                    iconPadding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    height: 40,
+                    padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                     color: FlutterFlowTheme.of(context).error,
                     textStyle: FlutterFlowTheme.of(context).labelLarge.override(
                           fontFamily: 'Readex Pro',
                           letterSpacing: 0.0,
                         ),
-                    elevation: 3.0,
+                    elevation: 3,
                     borderSide: const BorderSide(
                       color: Colors.transparent,
-                      width: 1.0,
+                      width: 1,
                     ),
-                    borderRadius: BorderRadius.circular(8.0),
+                    borderRadius: BorderRadius.circular(8),
                   ),
                 ),
               ),
@@ -358,22 +349,20 @@ class _ColorDetailPageWidgetState extends State<ColorDetailPageWidget> {
                     'gt2bh0zr' /* Label */,
                   ),
                   options: FFButtonOptions(
-                    height: 40.0,
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                    iconPadding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    height: 40,
+                    padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                     color: Colors.white,
                     textStyle: FlutterFlowTheme.of(context).labelLarge.override(
                           fontFamily: 'Readex Pro',
                           letterSpacing: 0.0,
                         ),
-                    elevation: 3.0,
+                    elevation: 3,
                     borderSide: const BorderSide(
                       color: Colors.transparent,
-                      width: 1.0,
+                      width: 1,
                     ),
-                    borderRadius: BorderRadius.circular(8.0),
+                    borderRadius: BorderRadius.circular(8),
                   ),
                 ),
               ),

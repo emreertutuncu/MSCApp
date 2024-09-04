@@ -354,6 +354,73 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Home',
     },
   },
+  // FormulaPage
+  {
+    '24lgybxi': {
+      'tr': 'Formula',
+      'en': '',
+    },
+    '3v9p6yok': {
+      'tr': 'Yellow Color Code: RAL 1013',
+      'en': '',
+    },
+    'fyqh5ww0': {
+      'tr': 'Amount',
+      'en': '',
+    },
+    'x7s1wpku': {
+      'tr': 'Enter amount...',
+      'en': '',
+    },
+    '1qorb323': {
+      'tr': 'Calculate',
+      'en': '',
+    },
+    'sn1g5lbf': {
+      'tr': 'Product Information',
+      'en': '',
+    },
+    'jp4zckf9': {
+      'tr': 'Total Amount: \\\$0.00',
+      'en': '',
+    },
+    'to6ga6ya': {
+      'tr': 'Product 1',
+      'en': '',
+    },
+    'plzg0ffq': {
+      'tr': '\\\$10.00',
+      'en': '',
+    },
+    '3xy2uw2o': {
+      'tr': 'Product 2',
+      'en': '',
+    },
+    '9phusr2u': {
+      'tr': '\\\$20.00',
+      'en': '',
+    },
+    'xdum3ear': {
+      'tr': 'Product 3',
+      'en': '',
+    },
+    '29w9gs3y': {
+      'tr': '\\\$30.00',
+      'en': '',
+    },
+    'adcasttq': {
+      'tr': 'Print',
+      'en': '',
+    },
+    'esxk6fms': {
+      'tr': 'Clean',
+      'en': '',
+    },
+    'h75hn13i': {
+      'tr': 'Label',
+      'en': '',
+    },
+  },
   // productColorRow
   {
     'tjhtzy4g': {
@@ -379,7 +446,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // ListTileProductColorRow
   {
     'mjwtu5vg': {
-      'tr': 'PRODUCT_CODE(RAL)',
+      'tr': 'DPL_PRODUCT_NAME',
       'en': 'PRODUCT_CODE(RAL)',
     },
     'lkgsgmjr': {

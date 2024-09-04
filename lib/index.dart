@@ -12,3 +12,5 @@ export '/pages/basic_pages/settings_page/settings_page_widget.dart'
     show SettingsPageWidget;
 export '/pages/basic_pages/forgot_password_page/forgot_password_page_widget.dart'
     show ForgotPasswordPageWidget;
+export '/pages/detail_pages/formula_page/formula_page_widget.dart'
+    show FormulaPageWidget;

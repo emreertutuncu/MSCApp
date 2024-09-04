@@ -46,13 +46,13 @@ class _StandardColorWidgetState extends State<StandardColorWidget> {
           backgroundColor: Colors.white,
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
-            borderRadius: 20.0,
-            borderWidth: 1.0,
-            buttonSize: 40.0,
+            borderRadius: 20,
+            borderWidth: 1,
+            buttonSize: 40,
             icon: Icon(
               Icons.arrow_back_rounded,
               color: FlutterFlowTheme.of(context).primaryText,
-              size: 24.0,
+              size: 24,
             ),
             onPressed: () async {
               context.pushNamed('HomePage');
@@ -65,14 +65,14 @@ class _StandardColorWidgetState extends State<StandardColorWidget> {
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Outfit',
                   color: const Color(0xFF15161E),
-                  fontSize: 24.0,
+                  fontSize: 24,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w500,
                 ),
           ),
           actions: const [],
           centerTitle: false,
-          elevation: 0.0,
+          elevation: 0,
         ),
         body: SafeArea(
           top: true,
@@ -86,8 +86,7 @@ class _StandardColorWidgetState extends State<StandardColorWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 8.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(16, 16, 16, 8),
                       child: TextFormField(
                         controller: _model.textFieldSearchTextController,
                         focusNode: _model.textFieldSearchFocusNode,
@@ -107,7 +106,7 @@ class _StandardColorWidgetState extends State<StandardColorWidget> {
                               FlutterFlowTheme.of(context).labelMedium.override(
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: const Color(0xFF606A85),
-                                    fontSize: 14.0,
+                                    fontSize: 14,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -115,40 +114,40 @@ class _StandardColorWidgetState extends State<StandardColorWidget> {
                               FlutterFlowTheme.of(context).labelMedium.override(
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: const Color(0xFF606A85),
-                                    fontSize: 14.0,
+                                    fontSize: 14,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: const BorderSide(
                               color: Color(0xFFE5E7EB),
-                              width: 2.0,
+                              width: 2,
                             ),
-                            borderRadius: BorderRadius.circular(12.0),
+                            borderRadius: BorderRadius.circular(12),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: const BorderSide(
                               color: Color(0xFF6F61EF),
-                              width: 2.0,
+                              width: 2,
                             ),
-                            borderRadius: BorderRadius.circular(12.0),
+                            borderRadius: BorderRadius.circular(12),
                           ),
                           errorBorder: OutlineInputBorder(
                             borderSide: const BorderSide(
                               color: Color(0xFFFF5963),
-                              width: 2.0,
+                              width: 2,
                             ),
-                            borderRadius: BorderRadius.circular(12.0),
+                            borderRadius: BorderRadius.circular(12),
                           ),
                           focusedErrorBorder: OutlineInputBorder(
                             borderSide: const BorderSide(
                               color: Color(0xFFFF5963),
-                              width: 2.0,
+                              width: 2,
                             ),
-                            borderRadius: BorderRadius.circular(12.0),
+                            borderRadius: BorderRadius.circular(12),
                           ),
-                          contentPadding: const EdgeInsetsDirectional.fromSTEB(
-                              20.0, 0.0, 0.0, 0.0),
+                          contentPadding:
+                              const EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
                           suffixIcon: const Icon(
                             Icons.search_rounded,
                             color: Color(0xFF606A85),
@@ -157,7 +156,7 @@ class _StandardColorWidgetState extends State<StandardColorWidget> {
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Plus Jakarta Sans',
                               color: const Color(0xFF15161E),
-                              fontSize: 14.0,
+                              fontSize: 14,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.w500,
                             ),
@@ -167,7 +166,7 @@ class _StandardColorWidgetState extends State<StandardColorWidget> {
                       ),
                     ),
                     const Divider(
-                      thickness: 1.0,
+                      thickness: 1,
                       color: Color(0xFFE5E7EB),
                     ),
                     InkWell(
@@ -189,16 +188,16 @@ class _StandardColorWidgetState extends State<StandardColorWidget> {
                       child: ListView(
                         padding: const EdgeInsets.fromLTRB(
                           0,
-                          8.0,
+                          8,
                           0,
-                          44.0,
+                          44,
                         ),
                         shrinkWrap: true,
                         scrollDirection: Axis.vertical,
                         children: [
                           wrapWithModel(
                             model: _model.listTileProductColorRowModel,
-                            updateCallback: () => setState(() {}),
+                            updateCallback: () => safeSetState(() {}),
                             child: const ListTileProductColorRowWidget(),
                           ),
                         ],

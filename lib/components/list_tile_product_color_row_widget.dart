@@ -62,11 +62,11 @@ class _ListTileProductColorRowWidgetState
         leading: const Icon(
           Icons.rectangle_sharp,
           color: Color(0xFFEFC039),
-          size: 50.0,
+          size: 50,
         ),
         title: Text(
           FFLocalizations.of(context).getText(
-            'mjwtu5vg' /* PRODUCT_CODE(RAL) */,
+            'mjwtu5vg' /* DPL_PRODUCT_NAME */,
           ),
           style: FlutterFlowTheme.of(context).titleLarge.override(
                 fontFamily: 'Outfit',
@@ -85,7 +85,7 @@ class _ListTileProductColorRowWidgetState
         trailing: Icon(
           Icons.arrow_forward_ios,
           color: FlutterFlowTheme.of(context).secondaryText,
-          size: 20.0,
+          size: 20,
         ),
         tileColor: FlutterFlowTheme.of(context).secondaryBackground,
         dense: false,

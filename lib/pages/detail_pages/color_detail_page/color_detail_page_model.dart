@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 class ColorDetailPageModel extends FlutterFlowModel<ColorDetailPageWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;

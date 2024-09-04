@@ -45,19 +45,19 @@ class _ProductCustomColorRowWidgetState
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 391.0,
+      width: 391,
       decoration: const BoxDecoration(),
       child: Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 12.0),
+        padding: const EdgeInsetsDirectional.fromSTEB(16, 12, 16, 12),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           children: [
             Container(
-              width: 50.0,
-              height: 50.0,
+              width: 50,
+              height: 50,
               decoration: BoxDecoration(
                 color: const Color(0xFF4AFAF0),
-                borderRadius: BorderRadius.circular(12.0),
+                borderRadius: BorderRadius.circular(12),
                 border: Border.all(
                   color: const Color(0xFF6F61EF),
                 ),
@@ -65,7 +65,7 @@ class _ProductCustomColorRowWidgetState
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -78,20 +78,19 @@ class _ProductCustomColorRowWidgetState
                       style: FlutterFlowTheme.of(context).bodyLarge.override(
                             fontFamily: 'Plus Jakarta Sans',
                             color: const Color(0xFF15161E),
-                            fontSize: 16.0,
+                            fontSize: 16,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w600,
                           ),
                     ),
                     Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 12.0, 0.0),
+                            padding:
+                                const EdgeInsetsDirectional.fromSTEB(0, 0, 12, 0),
                             child: Text(
                               FFLocalizations.of(context).getText(
                                 '81y78k9a' /* PRODUCT NAME (COLOR NAME) */,
@@ -101,39 +100,38 @@ class _ProductCustomColorRowWidgetState
                                   .override(
                                     fontFamily: 'Plus Jakarta Sans',
                                     color: const Color(0xFF606A85),
-                                    fontSize: 12.0,
+                                    fontSize: 12,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                   ),
                             ),
                           ),
                           const Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 4.0, 0.0),
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 4, 0),
                             child: Icon(
                               Icons.keyboard_control_rounded,
                               color: Color(0xFF606A85),
-                              size: 16.0,
+                              size: 16,
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(1.0, 0.0),
+                            alignment: const AlignmentDirectional(1, 0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  100.0, 0.0, 0.0, 0.0),
+                              padding:
+                                  const EdgeInsetsDirectional.fromSTEB(100, 0, 0, 0),
                               child: FlutterFlowIconButton(
                                 borderColor:
                                     FlutterFlowTheme.of(context).primary,
-                                borderRadius: 20.0,
-                                borderWidth: 1.0,
-                                buttonSize: 40.0,
+                                borderRadius: 20,
+                                borderWidth: 1,
+                                buttonSize: 40,
                                 fillColor:
                                     FlutterFlowTheme.of(context).alternate,
                                 icon: Icon(
                                   Icons.arrow_forward_ios_rounded,
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
-                                  size: 24.0,
+                                  size: 24,
                                 ),
                                 onPressed: () {
                                   print('IconButton pressed ...');
@@ -144,7 +142,7 @@ class _ProductCustomColorRowWidgetState
                         ],
                       ),
                     ),
-                  ].divide(const SizedBox(height: 4.0)),
+                  ].divide(const SizedBox(height: 4)),
                 ),
               ),
             ),
