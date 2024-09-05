@@ -90,16 +90,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const HomePageWidget(),
         ),
         FFRoute(
-          name: 'colorDetailPage',
-          path: '/colorDetailPage',
-          builder: (context, params) => ColorDetailPageWidget(
-            colorCode: params.getParam(
-              'colorCode',
-              ParamType.Color,
-            ),
-          ),
-        ),
-        FFRoute(
           name: 'CustomColor',
           path: '/customColor',
           builder: (context, params) => const CustomColorWidget(),

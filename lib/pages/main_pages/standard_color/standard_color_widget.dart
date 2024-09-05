@@ -2,6 +2,7 @@ import '/components/list_tile_product_color_row_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'standard_color_model.dart';
 export 'standard_color_model.dart';
@@ -90,6 +91,11 @@ class _StandardColorWidgetState extends State<StandardColorWidget> {
                       child: TextFormField(
                         controller: _model.textFieldSearchTextController,
                         focusNode: _model.textFieldSearchFocusNode,
+                        onChanged: (_) => EasyDebounce.debounce(
+                          '_model.textFieldSearchTextController',
+                          const Duration(milliseconds: 2000),
+                          () => safeSetState(() {}),
+                        ),
                         autofocus: true,
                         textInputAction: TextInputAction.search,
                         obscureText: false,
@@ -143,10 +149,21 @@ class _StandardColorWidgetState extends State<StandardColorWidget> {
                           ),
                           contentPadding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 0.0, 0.0),
-                          suffixIcon: const Icon(
-                            Icons.search_rounded,
-                            color: Color(0xFF606A85),
-                          ),
+                          suffixIcon: _model.textFieldSearchTextController!.text
+                                  .isNotEmpty
+                              ? InkWell(
+                                  onTap: () async {
+                                    _model.textFieldSearchTextController
+                                        ?.clear();
+                                    safeSetState(() {});
+                                  },
+                                  child: const Icon(
+                                    Icons.clear,
+                                    color: Color(0xFF606A85),
+                                    size: 16.0,
+                                  ),
+                                )
+                              : null,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Plus Jakarta Sans',
@@ -164,39 +181,31 @@ class _StandardColorWidgetState extends State<StandardColorWidget> {
                       thickness: 1.0,
                       color: Color(0xFFE5E7EB),
                     ),
-                    InkWell(
-                      splashColor: Colors.transparent,
-                      focusColor: Colors.transparent,
-                      hoverColor: Colors.transparent,
-                      highlightColor: Colors.transparent,
-                      onTap: () async {
-                        context.pushNamed(
-                          'colorDetailPage',
-                          queryParameters: {
-                            'colorCode': serializeParam(
-                              const Color(0x00000000),
-                              ParamType.Color,
-                            ),
-                          }.withoutNulls,
-                        );
-                      },
-                      child: ListView(
-                        padding: const EdgeInsets.fromLTRB(
-                          0,
-                          8.0,
-                          0,
-                          44.0,
-                        ),
-                        shrinkWrap: true,
-                        scrollDirection: Axis.vertical,
-                        children: [
-                          wrapWithModel(
+                    ListView(
+                      padding: const EdgeInsets.fromLTRB(
+                        0,
+                        8.0,
+                        0,
+                        44.0,
+                      ),
+                      shrinkWrap: true,
+                      scrollDirection: Axis.vertical,
+                      children: [
+                        InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.pushNamed('FormulaPage');
+                          },
+                          child: wrapWithModel(
                             model: _model.listTileProductColorRowModel,
                             updateCallback: () => safeSetState(() {}),
                             child: const ListTileProductColorRowWidget(),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ],
                 ),

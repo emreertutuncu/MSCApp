@@ -197,65 +197,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // colorDetailPage
-  {
-    'hosytc7f': {
-      'tr': 'Product Code',
-      'en': '',
-    },
-    'a1pw3qe2': {
-      'tr': 'Data Sheet',
-      'en': '',
-    },
-    'pg0ahpb2': {
-      'tr': 'RAL CODE',
-      'en': '',
-    },
-    'cjvjhju8': {
-      'tr': 'RAL NAME',
-      'en': '',
-    },
-    'rhzf83op': {
-      'tr': 'Amount',
-      'en': '',
-    },
-    'jt7oewjl': {
-      'tr': 'Calculate',
-      'en': '',
-    },
-    'l6ll7frz': {
-      'tr': 'Data Sheet',
-      'en': '',
-    },
-    'ssnf9seu': {
-      'tr': 'Print',
-      'en': '',
-    },
-    '2mn7m0n4': {
-      'tr': 'Clear',
-      'en': '',
-    },
-    'gt2bh0zr': {
-      'tr': 'Label',
-      'en': '',
-    },
-    '6b0o6oi6': {
-      'tr': 'MIX ',
-      'en': '',
-    },
-    '4kamm8i9': {
-      'tr': 'RAPID',
-      'en': '',
-    },
-    '71aezdrm': {
-      'tr': 'null grnull USD',
-      'en': '',
-    },
-    '5gkds1sw': {
-      'tr': 'Home',
-      'en': '',
-    },
-  },
   // CustomColor
   {
     'uan4uyki': {
@@ -268,7 +209,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '4z8hznt1': {
       'tr': 'Ara',
-      'en': '',
+      'en': 'Search',
     },
     '3aej2m03': {
       'tr': 'Home',
@@ -320,6 +261,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Çıkış yap',
       'en': 'Log Out',
     },
+    'bwa6to3v': {
+      'tr': 'Ayarlar',
+      'en': 'Settings',
+    },
   },
   // ForgotPasswordPage
   {
@@ -357,16 +302,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // FormulaPage
   {
     '3v9p6yok': {
-      'tr': ' RAL 1023',
-      'en': '',
+      'tr': 'DPL_PRODUCT_NAME',
+      'en': 'DPL_PRODUCT_NAME',
     },
     '01aistke': {
-      'tr': 'Traffic Yellow',
-      'en': '',
+      'tr': 'PRODUCT_NAME',
+      'en': 'PRODUCT_NAME',
     },
     'vjyd1p8g': {
       'tr': 'Datasheets',
-      'en': '',
+      'en': 'Datasheets',
     },
     'fyqh5ww0': {
       'tr': 'Miktar',
@@ -376,6 +321,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Miktar giriniz',
       'en': 'Enter Amount',
     },
+    '5a3k6cdo': {
+      'tr': '',
+      'en': '',
+    },
     's0t96w52': {
       'tr': 'KG',
       'en': 'KG',
@@ -384,12 +333,20 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Hesapla',
       'en': 'Calculate',
     },
-    'to6ga6ya': {
-      'tr': 'Product 1',
+    'bg9nwycu': {
+      'tr': 'Edit Column 1',
       'en': '',
     },
-    'plzg0ffq': {
-      'tr': '\\\$10.00',
+    'zz9musda': {
+      'tr': 'Edit Column 2',
+      'en': '',
+    },
+    '5k68lppz': {
+      'tr': 'Edit Column 3',
+      'en': '',
+    },
+    '7ljywiey': {
+      'tr': 'Edit Column 4',
       'en': '',
     },
     'adcasttq': {
@@ -418,9 +375,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'eqdwuxwk': {
       'tr': '\$ 0.00',
-      'en': '',
+      'en': '\$ 0.00',
     },
-    'jy459sdz': {
+    'eb9ygqtr': {
       'tr': 'Formül',
       'en': 'Formula',
     },

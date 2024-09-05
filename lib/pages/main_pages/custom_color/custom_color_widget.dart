@@ -106,12 +106,6 @@ class _CustomColorWidgetState extends State<CustomColorWidget> {
                           textInputAction: TextInputAction.search,
                           obscureText: false,
                           decoration: InputDecoration(
-                            labelStyle: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  letterSpacing: 0.0,
-                                ),
                             hintText: FFLocalizations.of(context).getText(
                               '4z8hznt1' /* Ara */,
                             ),
@@ -151,9 +145,22 @@ class _CustomColorWidgetState extends State<CustomColorWidget> {
                             ),
                             contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 16.0, 8.0),
-                            suffixIcon: const Icon(
-                              Icons.search,
-                            ),
+                            suffixIcon: _model.textFieldSearchTextController!
+                                    .text.isNotEmpty
+                                ? InkWell(
+                                    onTap: () async {
+                                      _model.textFieldSearchTextController
+                                          ?.clear();
+                                      safeSetState(() {});
+                                    },
+                                    child: Icon(
+                                      Icons.clear,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                      size: 16.0,
+                                    ),
+                                  )
+                                : null,
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
@@ -179,10 +186,19 @@ class _CustomColorWidgetState extends State<CustomColorWidget> {
                 shrinkWrap: true,
                 scrollDirection: Axis.vertical,
                 children: [
-                  wrapWithModel(
-                    model: _model.listTileProductColorRowModel,
-                    updateCallback: () => safeSetState(() {}),
-                    child: const ListTileProductColorRowWidget(),
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      context.pushNamed('FormulaPage');
+                    },
+                    child: wrapWithModel(
+                      model: _model.listTileProductColorRowModel,
+                      updateCallback: () => safeSetState(() {}),
+                      child: const ListTileProductColorRowWidget(),
+                    ),
                   ),
                 ],
               ),

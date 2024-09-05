@@ -1,8 +1,11 @@
+import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'formula_page_model.dart';
 export 'formula_page_model.dart';
 
@@ -42,7 +45,7 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
         key: scaffoldKey,
         backgroundColor: const Color(0xFFF1F4F8),
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+          backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
@@ -60,7 +63,7 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
           ),
           title: Text(
             FFLocalizations.of(context).getText(
-              'jy459sdz' /* Formül */,
+              'eb9ygqtr' /* Formül */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Outfit',
@@ -70,8 +73,8 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                 ),
           ),
           actions: const [],
-          centerTitle: false,
-          elevation: 2.0,
+          centerTitle: true,
+          elevation: 1.0,
         ),
         body: SafeArea(
           top: true,
@@ -82,7 +85,7 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
               children: [
                 Container(
                   width: 371.0,
-                  height: 127.0,
+                  height: 147.0,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                     boxShadow: const [
@@ -149,20 +152,22 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Text(
-                                        FFLocalizations.of(context).getText(
-                                          '3v9p6yok' /*  RAL 1023 */,
+                                      Expanded(
+                                        child: Text(
+                                          FFLocalizations.of(context).getText(
+                                            '3v9p6yok' /* DPL_PRODUCT_NAME */,
+                                          ),
+                                          textAlign: TextAlign.start,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Space Grotesk',
+                                                color: const Color(0xFF14181B),
+                                                fontSize: 16.0,
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.bold,
+                                              ),
                                         ),
-                                        textAlign: TextAlign.start,
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Space Grotesk',
-                                              color: const Color(0xFF14181B),
-                                              fontSize: 24.0,
-                                              letterSpacing: 0.0,
-                                              fontWeight: FontWeight.bold,
-                                            ),
                                       ),
                                     ],
                                   ),
@@ -171,7 +176,7 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                                     children: [
                                       Text(
                                         FFLocalizations.of(context).getText(
-                                          '01aistke' /* Traffic Yellow */,
+                                          '01aistke' /* PRODUCT_NAME */,
                                         ),
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
@@ -181,7 +186,7 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .alternate,
-                                              fontSize: 18.0,
+                                              fontSize: 14.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -208,10 +213,14 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                                         0.0, 0.0, 5.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () {
-                                        print('Button pressed ...');
+                                        print('ButtonDatasheets pressed ...');
                                       },
                                       text: FFLocalizations.of(context).getText(
                                         'vjyd1p8g' /* Datasheets */,
+                                      ),
+                                      icon: const FaIcon(
+                                        FontAwesomeIcons.filePdf,
+                                        size: 15.0,
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,
@@ -257,12 +266,18 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Expanded(
+                        Flexible(
                           child: TextFormField(
                             controller: _model.textFieldAmountTextController,
                             focusNode: _model.textFieldAmountFocusNode,
+                            onChanged: (_) => EasyDebounce.debounce(
+                              '_model.textFieldAmountTextController',
+                              const Duration(milliseconds: 2000),
+                              () => safeSetState(() {}),
+                            ),
                             autofocus: false,
                             textCapitalization: TextCapitalization.none,
+                            textInputAction: TextInputAction.done,
                             obscureText: false,
                             decoration: InputDecoration(
                               labelText: FFLocalizations.of(context).getText(
@@ -272,42 +287,59 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                                 'x7s1wpku' /* Miktar giriniz */,
                               ),
                               hintStyle: FlutterFlowTheme.of(context)
-                                  .bodyLarge
+                                  .bodyMedium
                                   .override(
                                     fontFamily: 'Space Grotesk',
-                                    color: const Color(0xFF14181B),
-                                    fontSize: 16.0,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryText,
+                                    fontSize: 14.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.normal,
                                   ),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
-                                  color: Color(0xFFCE035F),
+                              enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context).tertiary,
                                   width: 2.0,
                                 ),
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
-                                  color: Color(0x00000000),
+                              focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context).primary,
                                   width: 2.0,
                                 ),
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
-                              errorBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
-                                  color: Color(0x00000000),
+                              errorBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context).error,
                                   width: 2.0,
                                 ),
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
-                              focusedErrorBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
-                                  color: Color(0x00000000),
+                              focusedErrorBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context).error,
                                   width: 2.0,
                                 ),
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
+                              suffixIcon: _model.textFieldAmountTextController!
+                                      .text.isNotEmpty
+                                  ? InkWell(
+                                      onTap: () async {
+                                        _model.textFieldAmountTextController
+                                            ?.clear();
+                                        safeSetState(() {});
+                                      },
+                                      child: Icon(
+                                        Icons.clear,
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
+                                        size: 18.0,
+                                      ),
+                                    )
+                                  : null,
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
@@ -318,6 +350,7 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.normal,
                                 ),
+                            textAlign: TextAlign.end,
                             keyboardType: const TextInputType.numberWithOptions(
                                 signed: true, decimal: true),
                             validator: _model
@@ -325,77 +358,78 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                                 .asValidator(context),
                           ),
                         ),
-                        Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
-                              child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    4.0, 8.0, 0.0, 0.0),
-                                child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    's0t96w52' /* KG */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        fontSize: 18.0,
-                                        letterSpacing: 0.0,
-                                      ),
-                                ),
+                        Align(
+                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          child: Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                4.0, 0.0, 0.0, 0.0),
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                's0t96w52' /* KG */,
                               ),
+                              style: FlutterFlowTheme.of(context)
+                                  .labelMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    letterSpacing: 0.0,
+                                  ),
                             ),
-                          ],
+                          ),
+                        ),
+                        Align(
+                          alignment: const AlignmentDirectional(1.0, 0.0),
+                          child: Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 0.0, 0.0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Align(
+                                  alignment: const AlignmentDirectional(1.0, 0.0),
+                                  child: FFButtonWidget(
+                                    onPressed: () {
+                                      print('ButtonCalculate pressed ...');
+                                    },
+                                    text: FFLocalizations.of(context).getText(
+                                      '1qorb323' /* Hesapla */,
+                                    ),
+                                    icon: const Icon(
+                                      Icons.calculate,
+                                      size: 32.0,
+                                    ),
+                                    options: FFButtonOptions(
+                                      width: 100.0,
+                                      height: 55.0,
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 0.0, 0.0),
+                                      iconPadding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color:
+                                          FlutterFlowTheme.of(context).tertiary,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .override(
+                                            fontFamily: 'Space Grotesk',
+                                            color: Colors.white,
+                                            fontSize: 14.0,
+                                            letterSpacing: 0.0,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                      elevation: 2.0,
+                                      borderRadius: BorderRadius.circular(18.0),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
                       ],
                     ),
                   ),
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Expanded(
-                      child: Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
-                        child: FFButtonWidget(
-                          onPressed: () {
-                            print('ButtonCalculate pressed ...');
-                          },
-                          text: FFLocalizations.of(context).getText(
-                            '1qorb323' /* Hesapla */,
-                          ),
-                          icon: const Icon(
-                            Icons.calculate,
-                            size: 32.0,
-                          ),
-                          options: FFButtonOptions(
-                            width: 100.0,
-                            height: 55.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: FlutterFlowTheme.of(context).tertiary,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleMedium
-                                .override(
-                                  fontFamily: 'Space Grotesk',
-                                  color: Colors.white,
-                                  fontSize: 14.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                            elevation: 2.0,
-                            borderRadius: BorderRadius.circular(10.0),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
                 ),
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
@@ -403,42 +437,121 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Text(
-                              FFLocalizations.of(context).getText(
-                                'to6ga6ya' /* Product 1 */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Space Grotesk',
-                                    color: const Color(0xFF14181B),
-                                    fontSize: 14.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                            ),
-                            Text(
-                              FFLocalizations.of(context).getText(
-                                'plzg0ffq' /* \$10.00 */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Space Grotesk',
-                                    color: const Color(0xFF14181B),
-                                    fontSize: 14.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                            ),
-                          ],
-                        ),
                         Divider(
                           thickness: 2.0,
                           color: FlutterFlowTheme.of(context).alternate,
+                        ),
+                        SizedBox(
+                          height: 200.0,
+                          child: FlutterFlowDataTable<dynamic>(
+                            controller: _model.paginatedDataTableController,
+                            data: paginatedDataTableRecordList,
+                            columnsBuilder: (onSortChanged) => [
+                              DataColumn2(
+                                label: DefaultTextStyle.merge(
+                                  softWrap: true,
+                                  child: Container(),
+                                ),
+                              ),
+                              DataColumn2(
+                                label: DefaultTextStyle.merge(
+                                  softWrap: true,
+                                  child: Container(),
+                                ),
+                              ),
+                              DataColumn2(
+                                label: DefaultTextStyle.merge(
+                                  softWrap: true,
+                                  child: Container(),
+                                ),
+                              ),
+                              DataColumn2(
+                                label: DefaultTextStyle.merge(
+                                  softWrap: true,
+                                  child: Container(),
+                                ),
+                              ),
+                            ],
+                            dataRowBuilder: (Item, paginatedDataTableIndex,
+                                    selected, onSelectChanged) =>
+                                DataRow(
+                              color: WidgetStateProperty.all(
+                                paginatedDataTableIndex % 2 == 0
+                                    ? FlutterFlowTheme.of(context)
+                                        .secondaryBackground
+                                    : FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                              ),
+                              cells: [
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'bg9nwycu' /* Edit Column 1 */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'zz9musda' /* Edit Column 2 */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                ),
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    '5k68lppz' /* Edit Column 3 */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        color: FlutterFlowTheme.of(context)
+                                            .accent3,
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    '7ljywiey' /* Edit Column 4 */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondary,
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
+                              ].map((c) => DataCell(c)).toList(),
+                            ),
+                            paginated: true,
+                            selectable: false,
+                            hidePaginator: true,
+                            showFirstLastButtons: false,
+                            headingRowHeight: 0.0,
+                            dataRowHeight: 48.0,
+                            columnSpacing: 5.0,
+                            headingRowColor: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                            borderRadius: BorderRadius.circular(8.0),
+                            addHorizontalDivider: true,
+                            addTopAndBottomDivider: false,
+                            hideDefaultHorizontalDivider: true,
+                            horizontalDividerColor: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                            horizontalDividerThickness: 1.0,
+                            addVerticalDivider: false,
+                          ),
                         ),
                       ].divide(const SizedBox(height: 10.0)),
                     ),
@@ -456,6 +569,10 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                         },
                         text: FFLocalizations.of(context).getText(
                           'adcasttq' /* Yazdır */,
+                        ),
+                        icon: const Icon(
+                          Icons.print,
+                          size: 15.0,
                         ),
                         options: FFButtonOptions(
                           width: 100.0,
@@ -484,6 +601,10 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                         text: FFLocalizations.of(context).getText(
                           'esxk6fms' /* Temizle */,
                         ),
+                        icon: const FaIcon(
+                          FontAwesomeIcons.eraser,
+                          size: 15.0,
+                        ),
                         options: FFButtonOptions(
                           width: 100.0,
                           height: 40.0,
@@ -511,6 +632,10 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                         text: FFLocalizations.of(context).getText(
                           'h75hn13i' /* Etiket */,
                         ),
+                        icon: const FaIcon(
+                          FontAwesomeIcons.barcode,
+                          size: 15.0,
+                        ),
                         options: FFButtonOptions(
                           width: 100.0,
                           height: 40.0,
@@ -531,8 +656,16 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                       ),
+                      const Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [],
+                      ),
                     ].divide(const SizedBox(width: 20.0)),
                   ),
+                ),
+                Divider(
+                  thickness: 2.0,
+                  color: FlutterFlowTheme.of(context).alternate,
                 ),
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
@@ -582,24 +715,29 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                         style:
                             FlutterFlowTheme.of(context).titleMedium.override(
                                   fontFamily: 'Space Grotesk',
-                                  color: const Color(0xFF14181B),
+                                  color: FlutterFlowTheme.of(context).secondary,
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
                                 ),
                       ),
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'eqdwuxwk' /* $ 0.00 */,
+                      Padding(
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            'eqdwuxwk' /* $ 0.00 */,
+                          ),
+                          style: FlutterFlowTheme.of(context)
+                              .titleMedium
+                              .override(
+                                fontFamily: 'Space Grotesk',
+                                color: FlutterFlowTheme.of(context).secondary,
+                                fontSize: 20.0,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.w500,
+                              ),
                         ),
-                        style:
-                            FlutterFlowTheme.of(context).titleMedium.override(
-                                  fontFamily: 'Space Grotesk',
-                                  color: const Color(0xFF14181B),
-                                  fontSize: 20.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
                       ),
                     ],
                   ),

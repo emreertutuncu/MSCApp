@@ -48,15 +48,7 @@ class _ListTileProductColorRowWidgetState
       hoverColor: Colors.transparent,
       highlightColor: Colors.transparent,
       onTap: () async {
-        context.pushNamed(
-          'colorDetailPage',
-          queryParameters: {
-            'colorCode': serializeParam(
-              const Color(0x00000000),
-              ParamType.Color,
-            ),
-          }.withoutNulls,
-        );
+        context.pushNamed('FormulaPage');
       },
       child: ListTile(
         leading: const Icon(
