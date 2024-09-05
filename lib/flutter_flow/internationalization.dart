@@ -356,33 +356,33 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // FormulaPage
   {
-    '24lgybxi': {
-      'tr': 'Formula',
+    '3v9p6yok': {
+      'tr': ' RAL 1023',
       'en': '',
     },
-    '3v9p6yok': {
-      'tr': 'Yellow Color Code: RAL 1013',
+    '01aistke': {
+      'tr': 'Traffic Yellow',
+      'en': '',
+    },
+    'vjyd1p8g': {
+      'tr': 'Datasheets',
       'en': '',
     },
     'fyqh5ww0': {
-      'tr': 'Amount',
-      'en': '',
+      'tr': 'Miktar',
+      'en': 'Amount',
     },
     'x7s1wpku': {
-      'tr': 'Enter amount...',
-      'en': '',
+      'tr': 'Miktar giriniz',
+      'en': 'Enter Amount',
+    },
+    's0t96w52': {
+      'tr': 'KG',
+      'en': 'KG',
     },
     '1qorb323': {
-      'tr': 'Calculate',
-      'en': '',
-    },
-    'sn1g5lbf': {
-      'tr': 'Product Information',
-      'en': '',
-    },
-    'jp4zckf9': {
-      'tr': 'Total Amount: \\\$0.00',
-      'en': '',
+      'tr': 'Hesapla',
+      'en': 'Calculate',
     },
     'to6ga6ya': {
       'tr': 'Product 1',
@@ -392,33 +392,37 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': '\\\$10.00',
       'en': '',
     },
-    '3xy2uw2o': {
-      'tr': 'Product 2',
-      'en': '',
-    },
-    '9phusr2u': {
-      'tr': '\\\$20.00',
-      'en': '',
-    },
-    'xdum3ear': {
-      'tr': 'Product 3',
-      'en': '',
-    },
-    '29w9gs3y': {
-      'tr': '\\\$30.00',
-      'en': '',
-    },
     'adcasttq': {
-      'tr': 'Print',
-      'en': '',
+      'tr': 'Yazdır',
+      'en': 'Print',
     },
     'esxk6fms': {
-      'tr': 'Clean',
-      'en': '',
+      'tr': 'Temizle',
+      'en': 'Clean',
     },
     'h75hn13i': {
-      'tr': 'Label',
+      'tr': 'Etiket',
+      'en': 'Label',
+    },
+    'sn1g5lbf': {
+      'tr': 'Toplam Ağırlık',
+      'en': 'Total Weight',
+    },
+    'jp4zckf9': {
+      'tr': ' 0.00 KG',
+      'en': ' 0.00 KG',
+    },
+    'xwyb0h53': {
+      'tr': 'Toplam Tutar',
+      'en': 'Total Price',
+    },
+    'eqdwuxwk': {
+      'tr': '\$ 0.00',
       'en': '',
+    },
+    'jy459sdz': {
+      'tr': 'Formül',
+      'en': 'Formula',
     },
   },
   // productColorRow

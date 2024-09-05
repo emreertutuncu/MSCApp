@@ -62,7 +62,7 @@ class _ListTileProductColorRowWidgetState
         leading: const Icon(
           Icons.rectangle_sharp,
           color: Color(0xFFEFC039),
-          size: 50,
+          size: 50.0,
         ),
         title: Text(
           FFLocalizations.of(context).getText(
@@ -85,7 +85,7 @@ class _ListTileProductColorRowWidgetState
         trailing: Icon(
           Icons.arrow_forward_ios,
           color: FlutterFlowTheme.of(context).secondaryText,
-          size: 20,
+          size: 20.0,
         ),
         tileColor: FlutterFlowTheme.of(context).secondaryBackground,
         dense: false,

@@ -104,36 +104,37 @@ class _HomePageWidgetState extends State<HomePageWidget>
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         drawer: SizedBox(
-          width: 280,
+          width: 280.0,
           child: Drawer(
-            elevation: 10,
+            elevation: 10.0,
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0, 100, 0, 0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Align(
-                    alignment: const AlignmentDirectional(0, -1),
+                    alignment: const AlignmentDirectional(0.0, -1.0),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(8.0),
                       child: Image.asset(
                         'assets/images/msc-logo.png',
-                        width: 500,
-                        height: 100,
+                        width: 500.0,
+                        height: 100.0,
                         fit: BoxFit.contain,
                       ),
                     ),
                   ),
                   Container(
-                    width: 318,
-                    height: 537,
+                    width: 318.0,
+                    height: 537.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                     ),
                     child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                       child: ListView(
                         padding: EdgeInsets.zero,
                         scrollDirection: Axis.vertical,
@@ -165,7 +166,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 Icons.arrow_forward_ios,
                                 color:
                                     FlutterFlowTheme.of(context).secondaryText,
-                                size: 20,
+                                size: 20.0,
                               ),
                               tileColor: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -199,7 +200,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 Icons.arrow_forward_ios,
                                 color:
                                     FlutterFlowTheme.of(context).secondaryText,
-                                size: 20,
+                                size: 20.0,
                               ),
                               tileColor: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -244,7 +245,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 Icons.arrow_forward_ios,
                                 color:
                                     FlutterFlowTheme.of(context).secondaryText,
-                                size: 20,
+                                size: 20.0,
                               ),
                               tileColor: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -280,7 +281,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 Icons.arrow_forward_ios,
                                 color:
                                     FlutterFlowTheme.of(context).secondaryText,
-                                size: 20,
+                                size: 20.0,
                               ),
                               tileColor: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -294,7 +295,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                     ),
                   ),
                   Align(
-                    alignment: const AlignmentDirectional(0, -1),
+                    alignment: const AlignmentDirectional(0.0, -1.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         'dtswkd2g' /* [KullanıcıAdı] */,
@@ -315,7 +316,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(12, 0, 12, 0),
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -345,63 +347,63 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         }
                       },
                       child: Container(
-                        width: 80,
-                        height: 40,
+                        width: 80.0,
+                        height: 40.0,
                         decoration: BoxDecoration(
                           color: const Color(0xFFF1F4F8),
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(20.0),
                           border: Border.all(
                             color: const Color(0xFFE0E3E7),
-                            width: 1,
+                            width: 1.0,
                           ),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(2),
+                          padding: const EdgeInsets.all(2.0),
                           child: Stack(
-                            alignment: const AlignmentDirectional(0, 0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             children: [
                               const Align(
-                                alignment: AlignmentDirectional(-0.9, 0),
+                                alignment: AlignmentDirectional(-0.9, 0.0),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      6, 0, 0, 0),
+                                      6.0, 0.0, 0.0, 0.0),
                                   child: Icon(
                                     Icons.wb_sunny_rounded,
                                     color: Color(0xFF57636C),
-                                    size: 24,
+                                    size: 24.0,
                                   ),
                                 ),
                               ),
                               const Align(
-                                alignment: AlignmentDirectional(1, 0),
+                                alignment: AlignmentDirectional(1.0, 0.0),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 0, 6, 0),
+                                      0.0, 0.0, 6.0, 0.0),
                                   child: Icon(
                                     Icons.mode_night_rounded,
                                     color: Color(0xFF57636C),
-                                    size: 24,
+                                    size: 24.0,
                                   ),
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(1, 0),
+                                alignment: const AlignmentDirectional(1.0, 0.0),
                                 child: Container(
-                                  width: 36,
-                                  height: 36,
+                                  width: 36.0,
+                                  height: 36.0,
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     boxShadow: const [
                                       BoxShadow(
-                                        blurRadius: 4,
+                                        blurRadius: 4.0,
                                         color: Color(0x430B0D0F),
                                         offset: Offset(
                                           0.0,
-                                          2,
+                                          2.0,
                                         ),
                                       )
                                     ],
-                                    borderRadius: BorderRadius.circular(30),
+                                    borderRadius: BorderRadius.circular(30.0),
                                     shape: BoxShape.rectangle,
                                   ),
                                 ).animateOnActionTrigger(
@@ -417,18 +419,18 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   ),
                   Expanded(
                     child: Align(
-                      alignment: const AlignmentDirectional(0, 0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: FlutterFlowIconButton(
-                        borderRadius: 20,
-                        borderWidth: 1,
-                        buttonSize: 40,
+                        borderRadius: 20.0,
+                        borderWidth: 1.0,
+                        buttonSize: 40.0,
                         fillColor: FlutterFlowTheme.of(context).error,
                         hoverColor: FlutterFlowTheme.of(context).tertiary,
                         hoverIconColor: FlutterFlowTheme.of(context).error,
                         icon: Icon(
                           Icons.exit_to_app,
                           color: FlutterFlowTheme.of(context).alternate,
-                          size: 24,
+                          size: 24.0,
                         ),
                         showLoadingIndicator: true,
                         onPressed: () async {
@@ -471,14 +473,14 @@ class _HomePageWidgetState extends State<HomePageWidget>
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.white,
-            borderRadius: 20,
-            borderWidth: 1,
-            buttonSize: 40,
+            borderRadius: 20.0,
+            borderWidth: 1.0,
+            buttonSize: 40.0,
             fillColor: const Color(0x4CFFFFFF),
             icon: Icon(
               Icons.menu,
               color: FlutterFlowTheme.of(context).primaryText,
-              size: 24,
+              size: 24.0,
             ),
             onPressed: () async {
               scaffoldKey.currentState!.openDrawer();
@@ -492,7 +494,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Readex Pro',
-                      fontSize: 24,
+                      fontSize: 24.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.bold,
                     ),
@@ -501,7 +503,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
           ),
           actions: const [],
           centerTitle: false,
-          elevation: 2,
+          elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
@@ -523,29 +525,30 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   scrollDirection: Axis.vertical,
                   children: [
                     Container(
-                      width: 100,
-                      height: 100,
+                      width: 100.0,
+                      height: 100.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                         child: Stack(
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(-1, -1),
+                              alignment: const AlignmentDirectional(-1.0, -1.0),
                               child: ClipRRect(
-                                borderRadius: BorderRadius.circular(8),
+                                borderRadius: BorderRadius.circular(8.0),
                                 child: Image.asset(
                                   'assets/images/WhatsApp_Image_2024-08-28_at_15.36.43.jpeg',
-                                  width: 100,
-                                  height: 100,
+                                  width: 100.0,
+                                  height: 100.0,
                                   fit: BoxFit.fill,
                                 ),
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0, -1),
+                              alignment: const AlignmentDirectional(0.0, -1.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
                                   'sb7n8mo2' /*                               ... */,
@@ -576,7 +579,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             Opacity(
                               opacity: 0.5,
                               child: Align(
-                                alignment: const AlignmentDirectional(0, 0),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
                                     'd13xe2yp' /* 

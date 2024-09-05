@@ -47,14 +47,14 @@ class _CustomColorWidgetState extends State<CustomColorWidget> {
           backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
-            borderRadius: 20,
-            borderWidth: 1,
-            buttonSize: 40,
+            borderRadius: 20.0,
+            borderWidth: 1.0,
+            buttonSize: 40.0,
             fillColor: const Color(0x4CFDFDFD),
             icon: Icon(
               Icons.arrow_back_rounded,
               color: FlutterFlowTheme.of(context).primaryText,
-              size: 24,
+              size: 24.0,
             ),
             onPressed: () async {
               context.pushNamed('HomePage');
@@ -70,7 +70,7 @@ class _CustomColorWidgetState extends State<CustomColorWidget> {
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
                       fontFamily: 'Outfit',
                       color: FlutterFlowTheme.of(context).primaryText,
-                      fontSize: 22,
+                      fontSize: 22.0,
                       letterSpacing: 0.0,
                     ),
               ),
@@ -78,7 +78,7 @@ class _CustomColorWidgetState extends State<CustomColorWidget> {
           ),
           actions: const [],
           centerTitle: false,
-          elevation: 2,
+          elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
@@ -90,9 +90,10 @@ class _CustomColorWidgetState extends State<CustomColorWidget> {
                 children: [
                   Expanded(
                     child: Align(
-                      alignment: const AlignmentDirectional(0, 0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(16, 16, 16, 8),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            16.0, 16.0, 16.0, 8.0),
                         child: TextFormField(
                           controller: _model.textFieldSearchTextController,
                           focusNode: _model.textFieldSearchFocusNode,
@@ -123,33 +124,33 @@ class _CustomColorWidgetState extends State<CustomColorWidget> {
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color: FlutterFlowTheme.of(context).alternate,
-                                width: 2,
+                                width: 2.0,
                               ),
-                              borderRadius: BorderRadius.circular(8),
+                              borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color: FlutterFlowTheme.of(context).primary,
-                                width: 2,
+                                width: 2.0,
                               ),
-                              borderRadius: BorderRadius.circular(8),
+                              borderRadius: BorderRadius.circular(8.0),
                             ),
                             errorBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color: FlutterFlowTheme.of(context).error,
-                                width: 2,
+                                width: 2.0,
                               ),
-                              borderRadius: BorderRadius.circular(8),
+                              borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedErrorBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color: FlutterFlowTheme.of(context).error,
-                                width: 2,
+                                width: 2.0,
                               ),
-                              borderRadius: BorderRadius.circular(8),
+                              borderRadius: BorderRadius.circular(8.0),
                             ),
-                            contentPadding:
-                                const EdgeInsetsDirectional.fromSTEB(16, 16, 16, 8),
+                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                                16.0, 16.0, 16.0, 8.0),
                             suffixIcon: const Icon(
                               Icons.search,
                             ),
@@ -170,7 +171,7 @@ class _CustomColorWidgetState extends State<CustomColorWidget> {
                 ],
               ),
               Divider(
-                thickness: 1,
+                thickness: 1.0,
                 color: FlutterFlowTheme.of(context).accent4,
               ),
               ListView(

@@ -46,13 +46,13 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
+          borderRadius: 30.0,
+          borderWidth: 1.0,
+          buttonSize: 60.0,
           icon: const Icon(
             Icons.arrow_back_rounded,
             color: Color(0xFF15161E),
-            size: 30,
+            size: 30.0,
           ),
           onPressed: () async {
             context.pop();
@@ -60,14 +60,14 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
         ),
         actions: const [],
         centerTitle: false,
-        elevation: 0,
+        elevation: 0.0,
       ),
       body: Align(
-        alignment: const AlignmentDirectional(0, -1),
+        alignment: const AlignmentDirectional(0.0, -1.0),
         child: Container(
           width: double.infinity,
           constraints: const BoxConstraints(
-            maxWidth: 570,
+            maxWidth: 570.0,
           ),
           decoration: const BoxDecoration(),
           child: Column(
@@ -81,7 +81,7 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                 tablet: false,
               ))
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 8),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -94,15 +94,17 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         const Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 12),
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 12.0, 0.0, 12.0),
                           child: Icon(
                             Icons.arrow_back_rounded,
                             color: Color(0xFF15161E),
-                            size: 24,
+                            size: 24.0,
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              12.0, 0.0, 0.0, 0.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
                               'tqm4a4cc' /* Geri */,
@@ -112,7 +114,7 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                                 .override(
                                   fontFamily: 'Plus Jakarta Sans',
                                   color: const Color(0xFF15161E),
-                                  fontSize: 14,
+                                  fontSize: 14.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
                                 ),
@@ -123,7 +125,7 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                   ),
                 ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     'kib64831' /* Şifremi unuttum */,
@@ -131,14 +133,14 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                   style: FlutterFlowTheme.of(context).headlineMedium.override(
                         fontFamily: 'Outfit',
                         color: const Color(0xFF15161E),
-                        fontSize: 24,
+                        fontSize: 24.0,
                         letterSpacing: 0.0,
                         fontWeight: FontWeight.w500,
                       ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16, 8, 16, 16),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 16.0, 16.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     '2u3k6tbf' /* Şifrenizi sıfırlamanız için bi... */,
@@ -146,14 +148,14 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                   style: FlutterFlowTheme.of(context).labelMedium.override(
                         fontFamily: 'Plus Jakarta Sans',
                         color: const Color(0xFF606A85),
-                        fontSize: 14,
+                        fontSize: 14.0,
                         letterSpacing: 0.0,
                         fontWeight: FontWeight.w500,
                       ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
                 child: SizedBox(
                   width: double.infinity,
                   child: TextFormField(
@@ -169,7 +171,7 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                           FlutterFlowTheme.of(context).labelMedium.override(
                                 fontFamily: 'Plus Jakarta Sans',
                                 color: const Color(0xFF606A85),
-                                fontSize: 14,
+                                fontSize: 14.0,
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -180,47 +182,47 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                           FlutterFlowTheme.of(context).labelMedium.override(
                                 fontFamily: 'Plus Jakarta Sans',
                                 color: const Color(0xFF606A85),
-                                fontSize: 14,
+                                fontSize: 14.0,
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.w500,
                               ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(
                           color: Color(0xFFE5E7EB),
-                          width: 2,
+                          width: 2.0,
                         ),
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(12.0),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderSide: const BorderSide(
                           color: Color(0xFF6F61EF),
-                          width: 2,
+                          width: 2.0,
                         ),
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(12.0),
                       ),
                       errorBorder: OutlineInputBorder(
                         borderSide: const BorderSide(
                           color: Color(0xFFFF5963),
-                          width: 2,
+                          width: 2.0,
                         ),
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(12.0),
                       ),
                       focusedErrorBorder: OutlineInputBorder(
                         borderSide: const BorderSide(
                           color: Color(0xFFFF5963),
-                          width: 2,
+                          width: 2.0,
                         ),
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(12.0),
                       ),
                       filled: true,
                       fillColor: Colors.white,
-                      contentPadding:
-                          const EdgeInsetsDirectional.fromSTEB(24, 24, 20, 24),
+                      contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                          24.0, 24.0, 20.0, 24.0),
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Plus Jakarta Sans',
                           color: const Color(0xFF15161E),
-                          fontSize: 14,
+                          fontSize: 14.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w500,
                         ),
@@ -233,9 +235,10 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(0, 0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16, 24, 16, 0),
+                  padding:
+                      const EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       await actions.newCustomAction(
@@ -247,24 +250,26 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                     ),
                     options: FFButtonOptions(
                       width: double.infinity,
-                      height: 50,
-                      padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                      height: 50.0,
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      iconPadding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: const Color(0xFF6F61EF),
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Plus Jakarta Sans',
                                 color: Colors.white,
-                                fontSize: 16,
+                                fontSize: 16.0,
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.w500,
                               ),
-                      elevation: 3,
+                      elevation: 3.0,
                       borderSide: const BorderSide(
                         color: Colors.transparent,
-                        width: 1,
+                        width: 1.0,
                       ),
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(12.0),
                     ),
                   ),
                 ),
