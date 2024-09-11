@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'forgot_password_page_model.dart';
 export 'forgot_password_page_model.dart';
@@ -240,13 +239,15 @@ class _ForgotPasswordPageWidgetState extends State<ForgotPasswordPageWidget> {
                   padding:
                       const EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 0.0),
                   child: FFButtonWidget(
-                    onPressed: () async {
-                      await actions.newCustomAction(
-                        context,
-                      );
+                    onPressed: () {
+                      print('Button-Login pressed ...');
                     },
                     text: FFLocalizations.of(context).getText(
                       '4zg7opxn' /* Şifremi sıfırla */,
+                    ),
+                    icon: const Icon(
+                      Icons.restore,
+                      size: 24.0,
                     ),
                     options: FFButtonOptions(
                       width: double.infinity,

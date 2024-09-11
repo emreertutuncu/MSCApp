@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '/backend/schema/structs/index.dart';
+
 import '/auth/custom_auth/custom_auth_user_provider.dart';
 
 import '/index.dart';
@@ -92,12 +94,30 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'CustomColor',
           path: '/customColor',
-          builder: (context, params) => const CustomColorWidget(),
+          builder: (context, params) => CustomColorWidget(
+            paramDplProductName: params.getParam(
+              'paramDplProductName',
+              ParamType.String,
+            ),
+            paramColorCode: params.getParam(
+              'paramColorCode',
+              ParamType.Color,
+            ),
+          ),
         ),
         FFRoute(
           name: 'StandardColor',
           path: '/standardColor',
-          builder: (context, params) => const StandardColorWidget(),
+          builder: (context, params) => StandardColorWidget(
+            paramDplProductName: params.getParam(
+              'paramDplProductName',
+              ParamType.String,
+            ),
+            paramColorCode: params.getParam(
+              'paramColorCode',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: 'SettingsPage',
@@ -112,7 +132,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'FormulaPage',
           path: '/formulaPage',
-          builder: (context, params) => const FormulaPageWidget(),
+          builder: (context, params) => FormulaPageWidget(
+            dplProductName: params.getParam(
+              'dplProductName',
+              ParamType.String,
+            ),
+            colorCode: params.getParam(
+              'colorCode',
+              ParamType.Color,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -231,6 +260,7 @@ class FFParameters {
     String paramName,
     ParamType type, {
     bool isList = false,
+    StructBuilder<T>? structBuilder,
   }) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -248,6 +278,7 @@ class FFParameters {
       param,
       type,
       isList,
+      structBuilder: structBuilder,
     );
   }
 }

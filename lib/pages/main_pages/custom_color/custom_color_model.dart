@@ -1,4 +1,3 @@
-import '/components/list_tile_product_color_row_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'custom_color_widget.dart' show CustomColorWidget;
 import 'package:flutter/material.dart';
@@ -11,20 +10,13 @@ class CustomColorModel extends FlutterFlowModel<CustomColorWidget> {
   TextEditingController? textFieldSearchTextController;
   String? Function(BuildContext, String?)?
       textFieldSearchTextControllerValidator;
-  // Model for ListTileProductColorRow component.
-  late ListTileProductColorRowModel listTileProductColorRowModel;
 
   @override
-  void initState(BuildContext context) {
-    listTileProductColorRowModel =
-        createModel(context, () => ListTileProductColorRowModel());
-  }
+  void initState(BuildContext context) {}
 
   @override
   void dispose() {
     textFieldSearchFocusNode?.dispose();
     textFieldSearchTextController?.dispose();
-
-    listTileProductColorRowModel.dispose();
   }
 }

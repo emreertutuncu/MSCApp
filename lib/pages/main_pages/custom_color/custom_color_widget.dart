@@ -1,4 +1,3 @@
-import '/components/list_tile_product_color_row_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -8,7 +7,14 @@ import 'custom_color_model.dart';
 export 'custom_color_model.dart';
 
 class CustomColorWidget extends StatefulWidget {
-  const CustomColorWidget({super.key});
+  const CustomColorWidget({
+    super.key,
+    required this.paramDplProductName,
+    required this.paramColorCode,
+  });
+
+  final String? paramDplProductName;
+  final Color? paramColorCode;
 
   @override
   State<CustomColorWidget> createState() => _CustomColorWidgetState();
@@ -192,12 +198,46 @@ class _CustomColorWidgetState extends State<CustomColorWidget> {
                     hoverColor: Colors.transparent,
                     highlightColor: Colors.transparent,
                     onTap: () async {
-                      context.pushNamed('FormulaPage');
+                      context.pushNamed(
+                        'FormulaPage',
+                        queryParameters: {
+                          'dplProductName': serializeParam(
+                            widget.paramDplProductName,
+                            ParamType.String,
+                          ),
+                          'colorCode': serializeParam(
+                            widget.paramColorCode,
+                            ParamType.Color,
+                          ),
+                        }.withoutNulls,
+                      );
                     },
-                    child: wrapWithModel(
-                      model: _model.listTileProductColorRowModel,
-                      updateCallback: () => safeSetState(() {}),
-                      child: const ListTileProductColorRowWidget(),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.rectangle_outlined,
+                        color: widget.paramColorCode,
+                        size: 48.0,
+                      ),
+                      title: Text(
+                        widget.paramDplProductName!,
+                        style: FlutterFlowTheme.of(context).titleLarge.override(
+                              fontFamily: 'Outfit',
+                              letterSpacing: 0.0,
+                            ),
+                      ),
+                      trailing: Icon(
+                        Icons.arrow_circle_right,
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                        size: 24.0,
+                      ),
+                      tileColor:
+                          FlutterFlowTheme.of(context).secondaryBackground,
+                      dense: false,
+                      contentPadding:
+                          const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
                     ),
                   ),
                 ],

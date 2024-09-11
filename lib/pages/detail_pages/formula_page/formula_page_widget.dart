@@ -1,4 +1,3 @@
-import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -10,7 +9,15 @@ import 'formula_page_model.dart';
 export 'formula_page_model.dart';
 
 class FormulaPageWidget extends StatefulWidget {
-  const FormulaPageWidget({super.key});
+  const FormulaPageWidget({
+    super.key,
+    String? dplProductName,
+    Color? colorCode,
+  })  : dplProductName = dplProductName ?? 'NULL',
+        colorCode = colorCode ?? Colors.white;
+
+  final String dplProductName;
+  final Color colorCode;
 
   @override
   State<FormulaPageWidget> createState() => _FormulaPageWidgetState();
@@ -131,8 +138,7 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                                           width: 50.0,
                                           height: 50.0,
                                           decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
-                                                .warning,
+                                            color: widget.colorCode,
                                             boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 4.0,
@@ -154,9 +160,7 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                                     children: [
                                       Expanded(
                                         child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            '3v9p6yok' /* DPL_PRODUCT_NAME */,
-                                          ),
+                                          widget.dplProductName,
                                           textAlign: TextAlign.start,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -171,27 +175,9 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                                       ),
                                     ],
                                   ),
-                                  Row(
+                                  const Row(
                                     mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Text(
-                                        FFLocalizations.of(context).getText(
-                                          '01aistke' /* PRODUCT_NAME */,
-                                        ),
-                                        textAlign: TextAlign.start,
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Space Grotesk',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              fontSize: 14.0,
-                                              letterSpacing: 0.0,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                      ),
-                                    ],
+                                    children: [],
                                   ),
                                 ],
                               ),
@@ -441,117 +427,9 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                           thickness: 2.0,
                           color: FlutterFlowTheme.of(context).alternate,
                         ),
-                        SizedBox(
+                        const SizedBox(
+                          width: 350.0,
                           height: 200.0,
-                          child: FlutterFlowDataTable<dynamic>(
-                            controller: _model.paginatedDataTableController,
-                            data: paginatedDataTableRecordList,
-                            columnsBuilder: (onSortChanged) => [
-                              DataColumn2(
-                                label: DefaultTextStyle.merge(
-                                  softWrap: true,
-                                  child: Container(),
-                                ),
-                              ),
-                              DataColumn2(
-                                label: DefaultTextStyle.merge(
-                                  softWrap: true,
-                                  child: Container(),
-                                ),
-                              ),
-                              DataColumn2(
-                                label: DefaultTextStyle.merge(
-                                  softWrap: true,
-                                  child: Container(),
-                                ),
-                              ),
-                              DataColumn2(
-                                label: DefaultTextStyle.merge(
-                                  softWrap: true,
-                                  child: Container(),
-                                ),
-                              ),
-                            ],
-                            dataRowBuilder: (Item, paginatedDataTableIndex,
-                                    selected, onSelectChanged) =>
-                                DataRow(
-                              color: WidgetStateProperty.all(
-                                paginatedDataTableIndex % 2 == 0
-                                    ? FlutterFlowTheme.of(context)
-                                        .secondaryBackground
-                                    : FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                              ),
-                              cells: [
-                                Text(
-                                  FFLocalizations.of(context).getText(
-                                    'bg9nwycu' /* Edit Column 1 */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        letterSpacing: 0.0,
-                                      ),
-                                ),
-                                Text(
-                                  FFLocalizations.of(context).getText(
-                                    'zz9musda' /* Edit Column 2 */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        letterSpacing: 0.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                ),
-                                Text(
-                                  FFLocalizations.of(context).getText(
-                                    '5k68lppz' /* Edit Column 3 */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        color: FlutterFlowTheme.of(context)
-                                            .accent3,
-                                        letterSpacing: 0.0,
-                                      ),
-                                ),
-                                Text(
-                                  FFLocalizations.of(context).getText(
-                                    '7ljywiey' /* Edit Column 4 */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondary,
-                                        letterSpacing: 0.0,
-                                      ),
-                                ),
-                              ].map((c) => DataCell(c)).toList(),
-                            ),
-                            paginated: true,
-                            selectable: false,
-                            hidePaginator: true,
-                            showFirstLastButtons: false,
-                            headingRowHeight: 0.0,
-                            dataRowHeight: 48.0,
-                            columnSpacing: 5.0,
-                            headingRowColor: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            borderRadius: BorderRadius.circular(8.0),
-                            addHorizontalDivider: true,
-                            addTopAndBottomDivider: false,
-                            hideDefaultHorizontalDivider: true,
-                            horizontalDividerColor: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            horizontalDividerThickness: 1.0,
-                            addVerticalDivider: false,
-                          ),
                         ),
                       ].divide(const SizedBox(height: 10.0)),
                     ),
@@ -559,108 +437,114 @@ class _FormulaPageWidgetState extends State<FormulaPageWidget> {
                 ),
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(8.0, 16.0, 8.0, 0.0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      FFButtonWidget(
-                        onPressed: () {
-                          print('ButtonPrint pressed ...');
-                        },
-                        text: FFLocalizations.of(context).getText(
-                          'adcasttq' /* Yazdır */,
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        FFButtonWidget(
+                          onPressed: () {
+                            print('ButtonPrint pressed ...');
+                          },
+                          text: FFLocalizations.of(context).getText(
+                            'adcasttq' /* Yazdır */,
+                          ),
+                          icon: const Icon(
+                            Icons.print,
+                            size: 15.0,
+                          ),
+                          options: FFButtonOptions(
+                            width: 100.0,
+                            height: 40.0,
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: FlutterFlowTheme.of(context).warning,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  fontFamily: 'Space Grotesk',
+                                  color: Colors.white,
+                                  fontSize: 14.0,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                            elevation: 2.0,
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
                         ),
-                        icon: const Icon(
-                          Icons.print,
-                          size: 15.0,
+                        FFButtonWidget(
+                          onPressed: () {
+                            print('ButtonPrint pressed ...');
+                          },
+                          text: FFLocalizations.of(context).getText(
+                            'esxk6fms' /* Temizle */,
+                          ),
+                          icon: const FaIcon(
+                            FontAwesomeIcons.eraser,
+                            size: 15.0,
+                          ),
+                          options: FFButtonOptions(
+                            width: 100.0,
+                            height: 40.0,
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: const Color(0xFFCE035F),
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  fontFamily: 'Space Grotesk',
+                                  color: Colors.white,
+                                  fontSize: 14.0,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                            elevation: 2.0,
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
                         ),
-                        options: FFButtonOptions(
-                          width: 100.0,
-                          height: 40.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).warning,
-                          textStyle:
-                              FlutterFlowTheme.of(context).titleSmall.override(
-                                    fontFamily: 'Space Grotesk',
-                                    color: Colors.white,
-                                    fontSize: 14.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                          elevation: 2.0,
-                          borderRadius: BorderRadius.circular(10.0),
+                        FFButtonWidget(
+                          onPressed: () {
+                            print('ButtonLabel pressed ...');
+                          },
+                          text: FFLocalizations.of(context).getText(
+                            'h75hn13i' /* Etiket */,
+                          ),
+                          icon: const FaIcon(
+                            FontAwesomeIcons.barcode,
+                            size: 15.0,
+                          ),
+                          options: FFButtonOptions(
+                            width: 100.0,
+                            height: 40.0,
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: FlutterFlowTheme.of(context).accent2,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  fontFamily: 'Space Grotesk',
+                                  color: Colors.white,
+                                  fontSize: 14.0,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                            elevation: 2.0,
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
                         ),
-                      ),
-                      FFButtonWidget(
-                        onPressed: () {
-                          print('ButtonPrint pressed ...');
-                        },
-                        text: FFLocalizations.of(context).getText(
-                          'esxk6fms' /* Temizle */,
+                        const Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [],
                         ),
-                        icon: const FaIcon(
-                          FontAwesomeIcons.eraser,
-                          size: 15.0,
-                        ),
-                        options: FFButtonOptions(
-                          width: 100.0,
-                          height: 40.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: const Color(0xFFCE035F),
-                          textStyle:
-                              FlutterFlowTheme.of(context).titleSmall.override(
-                                    fontFamily: 'Space Grotesk',
-                                    color: Colors.white,
-                                    fontSize: 14.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                          elevation: 2.0,
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                      ),
-                      FFButtonWidget(
-                        onPressed: () {
-                          print('ButtonLabel pressed ...');
-                        },
-                        text: FFLocalizations.of(context).getText(
-                          'h75hn13i' /* Etiket */,
-                        ),
-                        icon: const FaIcon(
-                          FontAwesomeIcons.barcode,
-                          size: 15.0,
-                        ),
-                        options: FFButtonOptions(
-                          width: 100.0,
-                          height: 40.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).accent2,
-                          textStyle:
-                              FlutterFlowTheme.of(context).titleSmall.override(
-                                    fontFamily: 'Space Grotesk',
-                                    color: Colors.white,
-                                    fontSize: 14.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                          elevation: 2.0,
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                      ),
-                      const Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [],
-                      ),
-                    ].divide(const SizedBox(width: 20.0)),
+                      ].divide(const SizedBox(width: 20.0)),
+                    ),
                   ),
                 ),
                 Divider(

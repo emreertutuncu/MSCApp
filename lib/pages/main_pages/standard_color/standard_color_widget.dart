@@ -1,4 +1,4 @@
-import '/components/list_tile_product_color_row_widget.dart';
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -8,7 +8,14 @@ import 'standard_color_model.dart';
 export 'standard_color_model.dart';
 
 class StandardColorWidget extends StatefulWidget {
-  const StandardColorWidget({super.key});
+  const StandardColorWidget({
+    super.key,
+    this.paramDplProductName,
+    required this.paramColorCode,
+  });
+
+  final String? paramDplProductName;
+  final String? paramColorCode;
 
   @override
   State<StandardColorWidget> createState() => _StandardColorWidgetState();
@@ -181,31 +188,114 @@ class _StandardColorWidgetState extends State<StandardColorWidget> {
                       thickness: 1.0,
                       color: Color(0xFFE5E7EB),
                     ),
-                    ListView(
-                      padding: const EdgeInsets.fromLTRB(
-                        0,
-                        8.0,
-                        0,
-                        44.0,
-                      ),
-                      shrinkWrap: true,
-                      scrollDirection: Axis.vertical,
-                      children: [
-                        InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            context.pushNamed('FormulaPage');
+                    FutureBuilder<ApiCallResponse>(
+                      future: GetDplProductColorCodeCall.call(),
+                      builder: (context, snapshot) {
+                        // Customize what your widget looks like when it's loading.
+                        if (!snapshot.hasData) {
+                          return Center(
+                            child: SizedBox(
+                              width: 40.0,
+                              height: 40.0,
+                              child: CircularProgressIndicator(
+                                valueColor: AlwaysStoppedAnimation<Color>(
+                                  FlutterFlowTheme.of(context).primary,
+                                ),
+                              ),
+                            ),
+                          );
+                        }
+                        final listViewProductsGetDplProductColorCodeResponse =
+                            snapshot.data!;
+
+                        return Builder(
+                          builder: (context) {
+                            final productList = (GetDplProductColorCodeCall
+                                        .listdplProductColorCode(
+                                      listViewProductsGetDplProductColorCodeResponse
+                                          .jsonBody,
+                                    )?.toList() ??
+                                    [])
+                                .take(1000)
+                                .toList();
+
+                            return RefreshIndicator(
+                              onRefresh: () async {},
+                              child: ListView.builder(
+                                key: ValueKey(widget.paramDplProductName!),
+                                padding: const EdgeInsets.fromLTRB(
+                                  0,
+                                  8.0,
+                                  0,
+                                  44.0,
+                                ),
+                                shrinkWrap: true,
+                                scrollDirection: Axis.vertical,
+                                itemCount: productList.length,
+                                itemBuilder: (context, productListIndex) {
+                                  final productListItem =
+                                      productList[productListIndex];
+                                  return InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed(
+                                        'FormulaPage',
+                                        queryParameters: {
+                                          'dplProductName': serializeParam(
+                                            '',
+                                            ParamType.String,
+                                          ),
+                                          'colorCode': serializeParam(
+                                            const Color(0x00000000),
+                                            ParamType.Color,
+                                          ),
+                                        }.withoutNulls,
+                                      );
+                                    },
+                                    child: ListTile(
+                                      leading: const Icon(
+                                        Icons.rectangle_outlined,
+                                        color: Colors.white,
+                                        size: 48.0,
+                                      ),
+                                      title: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'vpwuvwuf' /* Title */,
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .titleLarge
+                                            .override(
+                                              fontFamily: 'Outfit',
+                                              letterSpacing: 0.0,
+                                            ),
+                                      ),
+                                      trailing: Icon(
+                                        Icons.arrow_circle_right_sharp,
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
+                                        size: 24.0,
+                                      ),
+                                      tileColor: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                      dense: false,
+                                      contentPadding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              12.0, 0.0, 12.0, 0.0),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                      ),
+                                    ),
+                                  );
+                                },
+                              ),
+                            );
                           },
-                          child: wrapWithModel(
-                            model: _model.listTileProductColorRowModel,
-                            updateCallback: () => safeSetState(() {}),
-                            child: const ListTileProductColorRowWidget(),
-                          ),
-                        ),
-                      ],
+                        );
+                      },
                     ),
                   ],
                 ),

@@ -179,7 +179,19 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              context.pushNamed('StandardColor');
+                              context.pushNamed(
+                                'StandardColor',
+                                queryParameters: {
+                                  'paramDplProductName': serializeParam(
+                                    '',
+                                    ParamType.String,
+                                  ),
+                                  'paramColorCode': serializeParam(
+                                    '',
+                                    ParamType.String,
+                                  ),
+                                }.withoutNulls,
+                              );
                             },
                             child: ListTile(
                               leading: const Icon(
@@ -217,6 +229,16 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             onTap: () async {
                               context.pushNamed(
                                 'CustomColor',
+                                queryParameters: {
+                                  'paramDplProductName': serializeParam(
+                                    '',
+                                    ParamType.String,
+                                  ),
+                                  'paramColorCode': serializeParam(
+                                    const Color(0x00000000),
+                                    ParamType.Color,
+                                  ),
+                                }.withoutNulls,
                                 extra: <String, dynamic>{
                                   kTransitionInfoKey: const TransitionInfo(
                                     hasTransition: true,

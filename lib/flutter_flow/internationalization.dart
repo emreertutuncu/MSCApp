@@ -211,6 +211,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Ara',
       'en': 'Search',
     },
+    'uw3sns74': {
+      'tr': '',
+      'en': '',
+    },
     '3aej2m03': {
       'tr': 'Home',
       'en': 'Anasayfa',
@@ -225,6 +229,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     't4pva9wm': {
       'tr': 'Ara',
       'en': 'Search all colors',
+    },
+    'vpwuvwuf': {
+      'tr': 'Title',
+      'en': '',
+    },
+    'pvkvso9h': {
+      'tr': '',
+      'en': '',
     },
     'yxlq2urv': {
       'tr': 'Home',
@@ -301,14 +313,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // FormulaPage
   {
-    '3v9p6yok': {
-      'tr': 'DPL_PRODUCT_NAME',
-      'en': 'DPL_PRODUCT_NAME',
-    },
-    '01aistke': {
-      'tr': 'PRODUCT_NAME',
-      'en': 'PRODUCT_NAME',
-    },
     'vjyd1p8g': {
       'tr': 'Datasheets',
       'en': 'Datasheets',
@@ -332,22 +336,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '1qorb323': {
       'tr': 'Hesapla',
       'en': 'Calculate',
-    },
-    'bg9nwycu': {
-      'tr': 'Edit Column 1',
-      'en': '',
-    },
-    'zz9musda': {
-      'tr': 'Edit Column 2',
-      'en': '',
-    },
-    '5k68lppz': {
-      'tr': 'Edit Column 3',
-      'en': '',
-    },
-    '7ljywiey': {
-      'tr': 'Edit Column 4',
-      'en': '',
     },
     'adcasttq': {
       'tr': 'Yazdır',
@@ -402,17 +390,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '81y78k9a': {
       'tr': 'PRODUCT NAME (COLOR NAME)',
       'en': '',
-    },
-  },
-  // ListTileProductColorRow
-  {
-    'mjwtu5vg': {
-      'tr': 'DPL_PRODUCT_NAME',
-      'en': 'PRODUCT_CODE(RAL)',
-    },
-    'lkgsgmjr': {
-      'tr': 'PRODUCT_NAME',
-      'en': 'PRODUCT_NAME',
     },
   },
   // Miscellaneous
